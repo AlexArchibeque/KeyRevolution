@@ -1,7 +1,7 @@
 
 
 
-const eventListeners = (canvas) => {
+const eventListeners = (canvas,game) => {
     // canvas.addEventListener("click",()=>( console.log("listening") ))
 
     document.addEventListener("keydown", (event)=>{
@@ -24,6 +24,8 @@ const eventListeners = (canvas) => {
                 return console.log("; key")
             case 32: // space Key
                 return console.log("space key")
+            case 27: // Escape key.
+                return game.stop();
             default:
                 return;
         }

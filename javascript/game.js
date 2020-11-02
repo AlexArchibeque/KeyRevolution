@@ -7,14 +7,31 @@ class Game {
         this.canvas.width = width;
         this.canvas.height = height;
 
-        const ctx = this.canvas.getContext("2d");
+        // Game Over Check
+        this.gameOver = false;
 
+        this.ctx = this.canvas.getContext("2d");
+        eventListeners(this.canvas,this);
 
-        eventListeners(this.canvas);
     }
 
+    // Temporary stop game;
+    stop() {
+        this.gameOver = true;
+    }
+    
+    // Game loop
     start(){
+        if(!this.gameOver){
+            this.draw();
+        }
     }
+
+    draw(){
+        requestAnimationFrame(this.draw.bind(this))
+    }
+
+
 }
 
 
