@@ -1,1 +1,5 @@
-console.log("Entry file once more")
+
+
+document.addEventListener("DOMContentLoaded", () => {
+    console.log("Hi there!")
+})

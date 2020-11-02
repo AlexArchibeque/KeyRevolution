@@ -12,6 +12,6 @@
   \*****************************/
 /*! unknown exports (runtime-defined) */
 /*! runtime requirements:  */
-eval("console.log(\"Entry file once more\")\n\n//# sourceURL=webpack://keyrevolution/./javascript/index.js?");
+eval("\n\ndocument.addEventListener(\"DOMContentLoaded\", () => {\n    console.log(\"Hi there!\")\n})\n\n//# sourceURL=webpack://keyrevolution/./javascript/index.js?");
 /******/ })()
 ;
