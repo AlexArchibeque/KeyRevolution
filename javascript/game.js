@@ -11,7 +11,7 @@ class Game {
         this.gameOver = false;
 
         this.ctx = this.canvas.getContext("2d");
-        eventListeners(this.canvas,this);
+        eventListeners(this.canvas,this,this.ctx);
 
     }
 
