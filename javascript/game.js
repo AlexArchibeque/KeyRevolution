@@ -51,15 +51,38 @@ class Game {
         }
     }
 
-    handleKey(key){
-        let currentKey = document.getElementById(key).getBoundingClientRect();
-        // Grabs position of key to be used compared to the scrolling objects.
-        let keyY = currentKey.top
-        let keyX = currentKey.left
+    handleKey(button, key){
+        // Handles if there are no keys left.
+        if(this.keys[key].length === 0){
+            return;
+        }
+
+        let gameCanvas = document.getElementById("game-canvas").getBoundingClientRect();
+        let currentButton = document.getElementById(button).getBoundingClientRect();
+
+        // Grabs Y position of button 
+        // subtracts half the height of the current button in order to get the middle.
+        let buttonY = currentButton.top - gameCanvas.top - (currentButton.height/2)
+
+        // Grabs Y position of first in line key falling down the screen.
+        let firstKey = this.keys[key][0]
+        // Takes Y Position of current key, adds frameCount to it to get the relative position.
+        // Then adds the total height of the key and divides by 2 to get the middle of the element
+        let keyY = firstKey.posY + this.frameCount + (firstKey.height/2)
         
+        // Calculates if button is close enough to removed/counted etc
+        this.handleKeyAlignmentCollision(keyY, buttonY, key);
+    }
+
+    handleKeyAlignmentCollision(keyY, buttonY, key){
+        let overlapPosY = keyY - buttonY
+        if(overlapPosY > 0 && overlapPosY < 20 ){
+            console.log("perfect")
+        }
     }
 
     draw(count){
+
         Object.keys(this.keys).forEach((key) => {
             this.keys[key].forEach(keyElement => {
                 this.ctx.drawImage(
@@ -71,6 +94,7 @@ class Game {
                 )
             })
         })
+
     }
 
     // Temporary stop game
