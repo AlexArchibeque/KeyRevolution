@@ -3,9 +3,9 @@
     flex-direction: column;
     align-items: center;
     position: absolute;
-    top: 70%;
+    top: 65%;
     left: 50%;
-    transform: translate(-50%, -30%);
+    transform: translate(-50%, -45%);
 }
 
 .not-space-button-container {
