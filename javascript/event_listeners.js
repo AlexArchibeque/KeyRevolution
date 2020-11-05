@@ -57,7 +57,7 @@ const eventListeners = (canvas,game,ctx) => {
             let ele = document.getElementById(idName)
             ele.className = idName
         })
-        
+
         game.setKeyMap("extreme")
     }
 
@@ -93,6 +93,8 @@ const eventListeners = (canvas,game,ctx) => {
                 return;
             case 27: // Escape key.dff
                 return game.stop();
+            case 82:
+                return game.stop('r');
             default:
                 return;
         }

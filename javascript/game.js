@@ -7,7 +7,7 @@ class Game {
     constructor(canvas,width,height){
 
         //
-        this.count = 0;
+        this.frameCount = 0;
 
         // Current key map set into arrays as to keep track of order.
         this.keys = {
@@ -73,17 +73,21 @@ class Game {
         })
     }
 
-    // Temporary stop game;
-    stop() {
+    // Temporary stop game
+    stop(key) {
+        //Reset Function
+        if(this.gameOver === true && key === "r"){
+            this.frameCount = 0;
+        }
+
         this.gameOver ? this.gameOver = false : this.gameOver = true;
         this.start();
-
     }
     
     // Game loop
     start(){
         this.ctx.clearRect(0,0,this.canvas.width, this.canvas.height);
-        this.draw(this.count++);
+        this.draw(this.frameCount++);
         if(!this.gameOver){
             requestAnimationFrame(this.start.bind(this))
         }
