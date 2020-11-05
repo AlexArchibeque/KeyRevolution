@@ -12,19 +12,19 @@ function easy() {
     };
 
     keyMapObj["a"].push(new Key(defaultImage, 80, 80, 10, 0));
-    keyMapObj["a"].push(new Key(defaultImage, 80, 80, 10, -40));
-    keyMapObj["a"].push(new Key(defaultImage, 80, 80, 10, -80));
+    keyMapObj["a"].push(new Key(defaultImage, 80, 80, 10, -70));
+    keyMapObj["a"].push(new Key(defaultImage, 80, 80, 10, -140));
 
     keyMapObj["s"].push(new Key(defaultImage, 80, 80, 100, -100));
     keyMapObj["s"].push(new Key(defaultImage, 80, 80, 100, -140));
-    keyMapObj["s"].push(new Key(defaultImage, 80, 80, 100, -180));
-    keyMapObj["s"].push(new Key(defaultImage, 80, 80, 100, -190));
+    keyMapObj["s"].push(new Key(defaultImage, 80, 80, 100, -240));
+    keyMapObj["s"].push(new Key(defaultImage, 80, 80, 100, -290));
 
     keyMapObj["l"].push(new Key(defaultImage, 80, 80, 820, -120));
-    keyMapObj["l"].push(new Key(defaultImage, 80, 80, 820, -130));
+    keyMapObj["l"].push(new Key(defaultImage, 80, 80, 820, -180));
 
     keyMapObj["colon"].push(new Key(defaultImage, 80, 80, 910, -220));
-    keyMapObj["colon"].push(new Key(defaultImage, 80, 80, 910, -240));
+    keyMapObj["colon"].push(new Key(defaultImage, 80, 80, 910, -280));
 
     return keyMapObj;
 }

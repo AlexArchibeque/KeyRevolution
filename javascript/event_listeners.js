@@ -2,16 +2,18 @@
 
 const eventListeners = (canvas,game,ctx) => {
     // clicking difficulties buttons.
+
+    // Add functionality to disable buttons completely
     const BUTTON_NAMES = [
         "a-button","s-button","d-button","f-button",
-        "j-button","k-button","l-button",";-button",
+        "j-button","k-button","l-button","colon-button",
         "space-button"]
 
     const easy = document.getElementById("easy-button");
     easy.onclick = () => {
         BUTTON_NAMES.forEach(idName => {
             let ele = document.getElementById(idName)
-            if(idName === "a-button" || idName === "s-button" || idName === "l-button" || idName === ";-button"){
+            if(idName === "a-button" || idName === "s-button" || idName === "l-button" || idName === "colon-button"){
                 ele.className = idName;
             }else{
                 ele.className = "disabled-button";
@@ -25,7 +27,7 @@ const eventListeners = (canvas,game,ctx) => {
     medium.onclick = () => {
         BUTTON_NAMES.forEach(idName => {
             let ele = document.getElementById(idName)
-            if(idName === "a-button" || idName === "s-button" || idName === "l-button" || idName === ";-button"
+            if(idName === "a-button" || idName === "s-button" || idName === "l-button" || idName === "colon-button"
                 || idName === "d-button" || idName === "k-button" ){
                 ele.className = idName;
             }else{
@@ -40,7 +42,7 @@ const eventListeners = (canvas,game,ctx) => {
     hard.onclick = () => {
         BUTTON_NAMES.forEach(idName => {
             let ele = document.getElementById(idName)
-            if(idName === "a-button" || idName === "s-button" || idName === "l-button" || idName === ";-button"
+            if(idName === "a-button" || idName === "s-button" || idName === "l-button" || idName === "colon-button"
                 || idName === "d-button" || idName === "k-button"
                 || idName === "j-button" || idName === "f-button" ){
                 ele.className = idName;
@@ -86,13 +88,13 @@ const eventListeners = (canvas,game,ctx) => {
                 game.handleKey("l-button","l");
                 return;
             case 186: // : Key
-                game.handleKey(";-button","colon");
+                game.handleKey("colon-button","colon");
                 return;
             case 32: // space Key
                 game.handleKey("space-button","space");
                 return;
             case 27: // Escape key.dff
-                return game.stop();
+                return game.stop("escape");
             case 82:
                 return game.stop('r');
             default:
