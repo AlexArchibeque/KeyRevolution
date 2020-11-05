@@ -139,6 +139,10 @@ class Game {
             this.keys[key] = newKeyArr;
         })
     }
+    // Soon to be modal to show current screen/gameover etc.
+    // showPauseScreen(){
+
+    // }
 
     // Temporary stop game
     checkGameOver(){
@@ -161,6 +165,7 @@ class Game {
         }
     }
 
+
     handleReset(){
         // Sets keys to origional of keyMap specificed
         this.setKeyMap(this.currentKeyMap);
@@ -179,8 +184,8 @@ class Game {
         
         if(!this.gameOver){
             requestAnimationFrame(this.start.bind(this))
-        } else {
-            this.showPauseScreen();
+        }else {
+            // this.showPauseScreen();
         }
 
         this.checkGameOver();
