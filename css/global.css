@@ -2,8 +2,28 @@
 
 #game-canvas {
     border: 3px solid black;
+}
+
+.game-and-difficulties-container{
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    height: 700px;
+}
+
+
+.difficulties-container {
+    position: relative;
+    margin: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.difficulties-container > button {
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 70px;
+    height: 40px;
 }
