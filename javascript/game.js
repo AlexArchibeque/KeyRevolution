@@ -15,13 +15,22 @@ class Game {
 
         this.ctx = this.canvas.getContext("2d");
 
-        eventListeners(this.canvas,this,this.ctx);
+        eventListeners(this.canvas, this, this.ctx);
         this.makeKeys();
 
     }
 
     makeKeys(){
         this.keyTest = new Key('face', imageFace, 80,80, 10,0)
+    }
+
+    handleKey(key){
+        let currentKey = document.getElementById(key).getBoundingClientRect();
+        // Grabs position of key to be used compared to the scrolling objects.
+        let keyY = currentKey.top
+        let keyX = currentKey.left
+
+        
     }
 
     // Temporary stop game;
