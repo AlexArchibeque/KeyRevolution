@@ -17,6 +17,8 @@ const eventListeners = (canvas,game,ctx) => {
                 ele.className = "disabled-button";
             }
         })
+
+        game.setKeyMap("easy")
     }
     
     const medium = document.getElementById("medium-button");
@@ -30,6 +32,8 @@ const eventListeners = (canvas,game,ctx) => {
                 ele.className = "disabled-button";
             }
         })
+
+        game.setKeyMap("medium")
     }
 
     const hard = document.getElementById("hard-button");
@@ -44,6 +48,8 @@ const eventListeners = (canvas,game,ctx) => {
                 ele.className = "disabled-button";
             }
         })
+
+        game.setKeyMap("hard")
     }
     const extreme = document.getElementById("extreme-button");
     extreme.onclick = () => {
@@ -51,6 +57,8 @@ const eventListeners = (canvas,game,ctx) => {
             let ele = document.getElementById(idName)
             ele.className = idName
         })
+        
+        game.setKeyMap("extreme")
     }
 
     // Listening for key presses

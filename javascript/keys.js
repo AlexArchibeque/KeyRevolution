@@ -1,9 +1,7 @@
 
 
 class Key {
-    constructor(name, img, width, height, posX, posY){
-        // General details
-        this.name = name;
+    constructor(img, width, height, posX, posY){
 
         // Set img to Img Object
         let keysImg = new Image()

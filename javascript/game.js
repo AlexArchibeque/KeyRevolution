@@ -1,10 +1,29 @@
 import eventListeners from './event_listeners';
-import Key from './keys.js'
-import imageFace from '../imgs/Alexzander_Archibeque.jpg';
 
+//Difficulties
+import easy from './key_maps/easy';
 
 class Game { 
     constructor(canvas,width,height){
+
+        //
+        this.count = 0;
+
+        // Current key map set into arrays as to keep track of order.
+        this.keys = {
+            a:[],
+            s:[],
+            d:[],
+            f:[],
+
+            j:[],
+            k:[],
+            l:[],
+            colon:[],
+
+            space:[]
+        };
+
         // Set the width/height of the game screen.
         this.canvas = canvas;
         this.canvas.width = width;
@@ -16,12 +35,20 @@ class Game {
         this.ctx = this.canvas.getContext("2d");
 
         eventListeners(this.canvas, this, this.ctx);
-        this.makeKeys();
 
+        this.setKeyMap("easy");
     }
 
-    makeKeys(){
-        this.keyTest = new Key('face', imageFace, 80,80, 10,0)
+    setKeyMap(difficulty){
+        if(difficulty === "easy"){
+            this.keys = easy();
+        }else if(difficulty === "medium"){
+
+        }else if(difficulty === "hard"){
+
+        }else{
+
+        }
     }
 
     handleKey(key){
@@ -29,8 +56,21 @@ class Game {
         // Grabs position of key to be used compared to the scrolling objects.
         let keyY = currentKey.top
         let keyX = currentKey.left
-
         
+    }
+
+    draw(count){
+        Object.keys(this.keys).forEach((key) => {
+            this.keys[key].forEach(keyElement => {
+                this.ctx.drawImage(
+                    keyElement.img, 
+                    keyElement.posX,
+                    keyElement.posY + count,
+                    keyElement.width,
+                    keyElement.height
+                )
+            })
+        })
     }
 
     // Temporary stop game;
@@ -41,16 +81,8 @@ class Game {
     // Game loop
     start(){
         this.ctx.clearRect(0,0,this.canvas.width, this.canvas.height);
-        this.ctx.drawImage(
-            this.keyTest.img , 
-            this.keyTest.posX , 
-            this.keyTest.posY,
-            this.keyTest.width,
-            this.keyTest.height)
-        
-        this.keyTest.posY += 1.5
+        this.draw(this.count++);
         requestAnimationFrame(this.start.bind(this))
-        console.log("started")
     }
 
 }
