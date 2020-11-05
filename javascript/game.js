@@ -75,14 +75,18 @@ class Game {
 
     // Temporary stop game;
     stop() {
-        this.gameOver = true;
+        this.gameOver ? this.gameOver = false : this.gameOver = true;
+        this.start();
+
     }
     
     // Game loop
     start(){
         this.ctx.clearRect(0,0,this.canvas.width, this.canvas.height);
         this.draw(this.count++);
-        requestAnimationFrame(this.start.bind(this))
+        if(!this.gameOver){
+            requestAnimationFrame(this.start.bind(this))
+        }
     }
 
 }
