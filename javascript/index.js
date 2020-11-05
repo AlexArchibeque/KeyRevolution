@@ -7,6 +7,6 @@ document.addEventListener("DOMContentLoaded", function(){
     const canvasEl = document.getElementById('game-canvas')
     const gameEl = new Game(canvasEl,GAME_X,GAME_Y);
 
-    // gameEl.start();
+    gameEl.start();
 
 })

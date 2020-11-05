@@ -1,12 +1,7 @@
-import imageFace from '../imgs/Alexzander_Archibeque.jpg';
 
-const default_image = new Image();
-default_image.src = imageFace;
 
 const eventListeners = (canvas,game,ctx) => {
-    canvas.addEventListener("click",()=>{ 
-        ctx.drawImage( default_image , 100, 0, 100, 100);
-    })
+
 
     document.addEventListener("keydown", (event)=>{
         switch(event.keyCode){
