@@ -26,6 +26,7 @@ function easy() {
     keyMapObj["colon"].push(new Key(defaultImage, 80, 80, 910, -220));
     keyMapObj["colon"].push(new Key(defaultImage, 80, 80, 910, -280));
 
+
     return keyMapObj;
 }
 

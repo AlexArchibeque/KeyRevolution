@@ -5,9 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- StyleSheets -->
+    <!-- Remember to not add an extra / for GithubPages -->
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="css/keys.css">
+    <link rel="stylesheet" href="css/modal.css">
     <!-- Webpack bundled JS -->
     <script type="text/javascript" src="util_files/bundle.js" > </script>
     <title>Key Revolution</title>
@@ -41,6 +43,28 @@
             <button id="space-button" class="disabled-button">space</button>
         </div>
         
+    </div>
+
+    <!-- The Modal -->
+    <div id="score-screen-outer-modal" class="modal">
+
+        <!-- Modal content -->
+        <div class="score-screen-content">
+            <h1>Paused/Finished</h1>
+            <div class="bottom-of-score-screen">
+                <ul>
+                    <li id="perfect-li">Perfect</li>
+                    <li id="ok-li">Ok</li>
+                    <li id="bad-li">Bad</li>
+                    <li id="missed-li">Missed</li>
+                </ul>
+                <div class="right-side-instructions">
+                    <p><strong>R</strong> - To restart</p>
+                    <p><stronge>ESC</stronge> - to continue</p>
+                </div>
+            </div>
+        </div>
+    
     </div>
 </body>
 </html>

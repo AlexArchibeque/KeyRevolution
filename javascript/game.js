@@ -42,6 +42,9 @@ class Game {
         // Game Over Check
         this.gameOver = false;
 
+        // Score Screen
+        this.scoreScreen = false;
+
         this.ctx = this.canvas.getContext("2d");
 
         eventListeners(this.canvas, this, this.ctx);
@@ -136,13 +139,26 @@ class Game {
                 }
             })
             
+            if(this.keys[key].length != newKeyArr){
+                this.score["missed"] += (this.keys[key].length - newKeyArr.length)
+            }
             this.keys[key] = newKeyArr;
         })
     }
-    // Soon to be modal to show current screen/gameover etc.
-    // showPauseScreen(){
 
-    // }
+
+    // Soon to be modal to show current screen/gameover etc.
+    showPauseScreen(){
+        let modal = document.getElementById("score-screen-outer-modal");
+        if(modal.style.display === "block"){
+            modal.style.display = "none";
+            this.scoreScreen = false;
+        }else{
+            modal.style.display = "block";
+            this.scoreScreen = true;
+        }
+        // this.start();
+    }
 
     // Temporary stop game
     checkGameOver(){
@@ -158,10 +174,17 @@ class Game {
     stop(key) {
         //Reset Function
         if(key === "r" && this.gameOver === true){
+            this.showPauseScreen();
             this.handleReset();
+            
         } else if(key === "escape"){
+            
             this.gameOver ? this.gameOver = false : this.gameOver = true;
-            this.start();
+
+            if(this.scoreScreen){
+                this.showPauseScreen();
+                this.start();
+            }
         }
     }
 
@@ -184,11 +207,11 @@ class Game {
         
         if(!this.gameOver){
             requestAnimationFrame(this.start.bind(this))
+            this.checkGameOver();
         }else {
-            // this.showPauseScreen();
+            this.showPauseScreen();
         }
 
-        this.checkGameOver();
     }
 
 }
