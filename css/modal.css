@@ -15,10 +15,11 @@
 
 .score-screen-content {
     background-color: #fefefe;
-    margin: 20% auto; /* 15% from the top and centered */
+    margin: 20% auto; 
     padding: 10px;
     border: 1px solid #888;
-    width: 25%; /* Could be more or less, depending on screen size */
+    width: 25%; 
+    border-radius: 10px;
 
     display: flex;
     flex-direction: column;
@@ -36,4 +37,80 @@
     width: 100%;
     border-bottom: 1px solid slategray;
 
+}
+
+.bottom-of-score-screen {
+    display:flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.bottom-of-score-screen > ul {
+    display: flex;
+    width: 40%;
+    flex-direction: column;
+
+}
+
+.bottom-of-score-screen >ul >li {
+    display:flex;
+    justify-content: space-between;
+    font-size: 30px;
+    font-weight: 500;
+    margin: 10px;
+}
+
+#perfect-li {
+    animation: colorRotate 6s linear 0s infinite;
+}
+/* Animates a rainbow effect */
+@keyframes colorRotate {
+    from {
+      color: #6666ff;
+    }
+    10% {
+      color: #0099ff;
+    }
+    50% {
+      color: #00ff00;
+    }
+    75% {
+      color: #ff3399;
+    }
+    100% {
+      color: #6666ff;
+    }
+  }
+
+#ok-li {
+    color: green;
+}
+
+#bad-li {
+    color: gray;
+}
+
+#missed-li{
+    color: red;
+}
+
+.right-side-instructions {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    margin-top: 10px;
+}
+
+.right-side-instructions > p {
+    margin-top: 20px;
+    font-size: 28px;
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.right-side-instructions > p > strong {
+    font-weight: 700;
+    font-size: 30px;
 }

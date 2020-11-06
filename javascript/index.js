@@ -9,6 +9,5 @@ document.addEventListener("DOMContentLoaded", function(){
 
     gameEl.start();
 
-    window.score = gameEl.score
 
 })

@@ -148,7 +148,19 @@ class Game {
 
 
     // Soon to be modal to show current screen/gameover etc.
+    setScreenScores(){
+        let perfLI = document.getElementById("perfect-score")
+        perfLI.innerHTML = this.score["perfect"]
+        let okLI = document.getElementById("ok-score")
+        okLI.innerHTML = this.score["ok"]
+        let badLI = document.getElementById("bad-score")
+        badLI.innerHTML = this.score["bad"]
+        let missedLI = document.getElementById("missed-score")
+        missedLI.innerHTML = this.score["missed"]
+    }
+
     showPauseScreen(){
+        this.setScreenScores();
         let modal = document.getElementById("score-screen-outer-modal");
         if(modal.style.display === "block"){
             modal.style.display = "none";
@@ -195,6 +207,12 @@ class Game {
         // Resets frame count
         this.frameCount = 0;
         this.gameOver = false;
+        this.score = {
+            perfect:0,
+            ok:0,
+            bad:0,
+            missed: 0
+        }
         this.start();
     }
     
