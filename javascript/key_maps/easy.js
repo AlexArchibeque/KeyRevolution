@@ -3,6 +3,7 @@ import defaultImage from '../../imgs/Alexzander_Archibeque.jpg';
 
 
 function easy() {
+    let audioTrack = new Audio("../../songs/buttercup.mp3");
     let keyMapObj = {
         a:[], s:[], d:[], f:[],
 
@@ -27,7 +28,7 @@ function easy() {
     keyMapObj["colon"].push(new Key(defaultImage, 80, 80, 910, -280));
 
 
-    return keyMapObj;
+    return [keyMapObj, audioTrack];
 }
 
 export default easy;

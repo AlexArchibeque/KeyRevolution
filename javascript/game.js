@@ -11,6 +11,7 @@ class Game {
 
         // Current key map set into arrays as to keep track of order.
         this.currentKeyMap = '';
+        this.audio;
 
         this.keys = {
             a:[],
@@ -54,7 +55,9 @@ class Game {
 
     setKeyMap(difficulty){
         if(difficulty === "easy"){
-            this.keys = easy();
+            let easyArr = easy();
+            this.keys = easyArr[0];
+            this.audio = easyArr[1];
             this.currentKeyMap = "easy";
         }else if(difficulty === "medium"){
 
@@ -221,6 +224,7 @@ class Game {
         this.ctx.clearRect(0,0,this.canvas.width, this.canvas.height);
         this.draw(this.frameCount++);
         this.keyCleanUp(this.frameCount);
+        // this.audio.play();
 
         
         if(!this.gameOver){
