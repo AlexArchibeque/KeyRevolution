@@ -6,7 +6,8 @@ class StartView {
     }
 
     start() {
-        this.game.start();
+
+        this.game.start(); // Starts the actual game
     }
 }
 

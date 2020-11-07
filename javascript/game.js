@@ -42,6 +42,7 @@ class Game {
 
         // Game Over Check
         this.gameOver = false;
+        this.finished = false;
 
         // Score Screen
         this.scoreScreen = false;
@@ -49,7 +50,6 @@ class Game {
         this.ctx = this.canvas.getContext("2d");
 
         eventListeners(this.canvas, this, this.ctx);
-
         this.setKeyMap("easy");
     }
 
@@ -162,9 +162,21 @@ class Game {
         missedLI.innerHTML = this.score["missed"]
     }
 
-    showPauseScreen(){
+    showPauseScreen(fin){
         this.setScreenScores();
         let modal = document.getElementById("score-screen-outer-modal");
+        // Changes inner HTML depending on if game is paused or finished.
+        let h1Modal = document.getElementById("paused-or-finished");
+        let escInstructions = document.getElementById("esc-to-continue");
+        
+        if(fin === "finished"){
+            h1Modal.innerHTML = "Finished!";
+            escInstructions.innerHTML = "Congrats!";
+        }else{
+            h1Modal.innerHTML = "Paused";
+            escInstructions.innerHTML = "<strong>ESC</strong> - To Continue";
+        }
+
         if(modal.style.display === "block"){
             modal.style.display = "none";
             this.scoreScreen = false;
@@ -172,7 +184,6 @@ class Game {
             modal.style.display = "block";
             this.scoreScreen = true;
         }
-        // this.start();
     }
 
     // Temporary stop game
@@ -184,6 +195,7 @@ class Game {
             }
         })
         this.gameOver = over;
+        this.finished = over;
     }
 
     stop(key) {
@@ -230,7 +242,9 @@ class Game {
         if(!this.gameOver){
             requestAnimationFrame(this.start.bind(this))
             this.checkGameOver();
-        }else {
+        }else if(this.finished) {
+            this.showPauseScreen("finished");
+        } else {
             this.showPauseScreen();
         }
 
