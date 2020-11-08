@@ -13,6 +13,7 @@ class StartView {
             startScreen.style.display = "none";
             //For testing ***
             this.game.audio.play();
+            this.game.stopAudio();
             this.game.start();
 
             // this.game.stopAudio();
