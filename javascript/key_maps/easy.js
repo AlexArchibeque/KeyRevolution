@@ -1,9 +1,11 @@
 import Key from '../keys'
 import defaultImage from '../../imgs/Alexzander_Archibeque.jpg';
+// import audioFile from '../../songs/buttercup.mp3'
+const PATH = document.URL.substr(0, document.URL.lastIndexOf('/'));
 
 
 function easy() {
-    let audioTrack = new Audio("../../songs/buttercup.mp3");
+    let audioTrack = new Audio(`${PATH}/songs/buttercup.mp3`);
     
     let keyMapObj = {
         a:[], s:[], d:[], f:[],
