@@ -15,7 +15,7 @@
   "bugs": {
     "url": "https://github.com/AlexArchibeque/KeyRevolution/issues"
   },
-  "homepage": "https://alexarchibeque.github.io/KeyRevolution",
+  "homepage": "https://alexarchibeque.github.io",
   "dependencies": {},
   "devDependencies": {
     "@babel/core": "^7.12.3",
