@@ -237,6 +237,7 @@ class Game {
             // If score screen is up.
             if(this.scoreScreen){
                 this.showPauseScreen();
+                // Plays audio when pause screen is put away.
 
                 this.audio.play();
                 this.start();
@@ -257,8 +258,14 @@ class Game {
             bad:0,
             missed: 0
         }
+
+        // Pauses audio, resets it to begging of the track
         this.stopAudio();
+        // Sets audio's volume to what user has it set at.
+        this.handleAudio();
+        // Starts audio track
         this.audio.play();
+
         this.start();
     }
 
