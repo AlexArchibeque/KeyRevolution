@@ -4,14 +4,17 @@ import eventListeners from './event_listeners';
 import easy from './key_maps/easy';
 
 class Game { 
-    constructor(canvas,width,height){
+    constructor(canvas, width, height){
 
-        //
+        // Keeps track of where we are in animation frames.
         this.frameCount = 0;
+        // Audio Stuff
+        this.audio;
+        this.audioVolume = 1.0;
 
         // Current key map set into arrays as to keep track of order.
         this.currentKeyMap = '';
-        this.audio;
+
 
         this.keys = {
             a:[],
@@ -66,6 +69,18 @@ class Game {
         }else{
 
         }
+    }
+
+    handleAudio(input){
+         if(input === "down" && this.audioVolume >= 0.05) {
+            this.audioVolume -= 0.05;
+        } else if(input === "up" && this.audioVolume <= 0.95) {
+            this.audioVolume += 0.05;
+        }
+        let volumePercentage = document.getElementById("volume-percentage");
+        volumePercentage.innerHTML = `Volume: ${Math.floor(this.audioVolume * 100)} `
+
+        this.audio.volume = this.audioVolume;
     }
 
     handleKey(button, key){
@@ -168,7 +183,7 @@ class Game {
         // Changes inner HTML depending on if game is paused or finished.
         let h1Modal = document.getElementById("paused-or-finished");
         let escInstructions = document.getElementById("esc-to-continue");
-        
+
         if(fin === "finished"){
             h1Modal.innerHTML = "Finished!";
             escInstructions.innerHTML = "Congrats!";

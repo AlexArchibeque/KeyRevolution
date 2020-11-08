@@ -4,6 +4,7 @@ import defaultImage from '../../imgs/Alexzander_Archibeque.jpg';
 
 function easy() {
     let audioTrack = new Audio("../../songs/buttercup.mp3");
+    
     let keyMapObj = {
         a:[], s:[], d:[], f:[],
 

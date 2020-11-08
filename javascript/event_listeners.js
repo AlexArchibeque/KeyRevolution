@@ -63,6 +63,28 @@ const eventListeners = (canvas,game,ctx) => {
         game.setKeyMap("extreme")
     }
 
+    // Audio event listeners
+
+    let volumeDown = document.getElementById("volume-down");
+    volumeDown.onclick = () => {
+        game.handleAudio("down")
+    }
+
+    let volumeUp = document.getElementById("volume-up");
+    volumeUp.onclick = () => {
+        game.handleAudio("up")
+    }
+
+    let playButton = document.getElementById("play-button");
+    playButton.onclick = () => {
+        if(game.audio.paused){
+            game.audio.play();
+        } else{ 
+            game.audio.pause();
+        }
+    }
+
+
     // Listening for key presses
     document.addEventListener("keydown", (event)=>{
         switch(event.keyCode){
