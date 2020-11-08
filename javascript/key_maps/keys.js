@@ -1,3 +1,4 @@
+// Brown keys, singular
 import AKey from '../../imgs/keys/singles/a-key.png'
 import SKey from '../../imgs/keys/singles/s-key.png'
 import DKey from '../../imgs/keys/singles/d-key.png'
@@ -7,6 +8,7 @@ import KKey from '../../imgs/keys/singles/k-key.png'
 import LKey from '../../imgs/keys/singles/l-key.png'
 import ColonKey from '../../imgs/keys/singles/colon-key.png'
 
+// green keys double.
 import A2Key from '../../imgs/keys/doubles/a2-key.png'
 import S2Key from '../../imgs/keys/doubles/s2-key.png'
 import D2Key from '../../imgs/keys/doubles/d2-key.png'
@@ -64,7 +66,12 @@ export class KeyD {
 
         // Set img to Img Object
         let keysImg = new Image()
-        keysImg.src = img;
+
+        if(img === 1) {   
+            keysImg.src = DKey;
+        }else if(img === 2) {
+            keysImg.src = D2Key;
+        }
         this.img = keysImg
 
         this.width = 80;
@@ -80,7 +87,13 @@ export class KeyF {
 
         // Set img to Img Object
         let keysImg = new Image()
-        keysImg.src = img;
+
+        if(img === 1) {   
+            keysImg.src = FKey;
+        }else if(img === 2) {
+            keysImg.src = F2Key;
+        }
+
         this.img = keysImg
 
         this.width = 80;
@@ -96,7 +109,13 @@ export class KeyJ {
 
         // Set img to Img Object
         let keysImg = new Image()
-        keysImg.src = img;
+
+        if(img === 1) {   
+            keysImg.src = JKey;
+        }else if(img === 2) {
+            keysImg.src = J2Key;
+        }
+
         this.img = keysImg
 
         this.width = 80;
@@ -112,7 +131,13 @@ export class KeyK {
 
         // Set img to Img Object
         let keysImg = new Image()
-        keysImg.src = img;
+
+        if(img === 1) {   
+            keysImg.src = KKey;
+        }else if(img === 2) {
+            keysImg.src = K2Key;
+        }
+
         this.img = keysImg
 
         this.width = 80;

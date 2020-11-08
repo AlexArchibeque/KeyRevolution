@@ -6,6 +6,10 @@ const PATH = document.URL.substr(0, document.URL.lastIndexOf('/'));
 
 function easy() {
     let audioTrack = new Audio(`${PATH}/songs/buttercup.mp3`);
+
+    // Grab the keymap letter you want to insert a letter into.
+    // push it in
+    // new KeyX(imageType, position in line);
     
     let keyMap = {
         a:[], s:[], d:[], f:[],
