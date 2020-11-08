@@ -87,37 +87,37 @@ const eventListeners = (canvas,game,ctx) => {
 
     // Listening for key presses
     document.addEventListener("keydown", (event)=>{
-        switch(event.keyCode){
-            case 65: // A Key
+        switch(event.code){
+            case "KeyA": // A Key
                 game.handleKey("a-button","a");
                 return;
-            case 83: // S Key
+            case "KeyS": // S Key
                 game.handleKey("s-button","s");
                 return;
-            case 68: // D Key
+            case "KeyD": // D Key
                 game.handleKey("d-button","d");
                 return;
-            case 70: // F Key
+            case "KeyF": // F Key
                 game.handleKey("f-button","f");
                 return;
-            case 74: // J Key
+            case "KeyJ": // J Key
                 game.handleKey("j-button","j");
                 return;
-            case 75: // K Key
+            case "KeyK": // K Key
                 game.handleKey("k-button","k");
                 return;
-            case 76: // L Key
+            case "KeyL": // L Key
                 game.handleKey("l-button","l");
                 return;
-            case 186: // : Key
+            case "Semicolon": // : Key
                 game.handleKey("colon-button","colon");
                 return;
-            case 32: // space Key
+            case "Space": // space Key
                 game.handleKey("space-button","space");
                 return;
-            case 27: // Escape key.dff
+            case "Escape": // Escape key.dff
                 return game.stop("escape");
-            case 82:
+            case "KeyR":
                 return game.stop('r');
             default:
                 return;
