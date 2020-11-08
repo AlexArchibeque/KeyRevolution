@@ -71,6 +71,8 @@ class Game {
         }
     }
 
+    // Audio Methods
+
     handleAudio(input){
          if(input === "down" && this.audioVolume >= 0.05) {
             this.audioVolume -= 0.05;
@@ -82,6 +84,14 @@ class Game {
 
         this.audio.volume = this.audioVolume;
     }
+
+    stopAudio(){
+        this.audio.pause();
+        this.audio.currentTime = 0;
+    }
+
+
+    // End of Audio Methods
 
     handleKey(button, key){
         // Handles if there are no keys left.
@@ -244,6 +254,29 @@ class Game {
             missed: 0
         }
         this.start();
+    }
+
+    // StartCountdown method.
+
+    startTimer(){
+        let countdownBox = document.getElementById("countdown-box");
+        countdownBox.style.display = "block";
+
+        setTimeout(() => {
+            countdownBox.innerHTML = "3";
+        }, 900)
+        setTimeout(() => {
+            countdownBox.innerHTML = "2";
+        }, 1900)
+        setTimeout(() => {
+            countdownBox.innerHTML = "1";
+        }, 2900)
+
+        setTimeout(() => {
+            countdownBox.style.display = "none";
+            this.audio.play();
+            this.start()
+        }, 4000)
     }
     
     // Game loop
