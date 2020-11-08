@@ -208,6 +208,7 @@ class Game {
         }else{
             modal.style.display = "block";
             this.scoreScreen = true;
+            this.audio.pause();
         }
     }
 
@@ -233,8 +234,11 @@ class Game {
             
             this.gameOver ? this.gameOver = false : this.gameOver = true;
 
+            // If score screen is up.
             if(this.scoreScreen){
                 this.showPauseScreen();
+
+                this.audio.play();
                 this.start();
             }
         }
@@ -253,11 +257,12 @@ class Game {
             bad:0,
             missed: 0
         }
+        this.stopAudio();
+        this.audio.play();
         this.start();
     }
 
     // StartCountdown method.
-
     startTimer(){
         let countdownBox = document.getElementById("countdown-box");
         countdownBox.style.display = "block";
@@ -284,8 +289,6 @@ class Game {
         this.ctx.clearRect(0,0,this.canvas.width, this.canvas.height);
         this.draw(this.frameCount++);
         this.keyCleanUp(this.frameCount);
-        // this.audio.play();
-
         
         if(!this.gameOver){
             requestAnimationFrame(this.start.bind(this))
