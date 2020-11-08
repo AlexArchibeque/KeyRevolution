@@ -1,4 +1,4 @@
-import {KeyA,KeyS,KeyColon,KeyL} from './keys'
+import {KeyA, KeyS, KeyColon, KeyL} from './keys'
 import defaultImage from '../../imgs/Alexzander_Archibeque.jpg';
 // import audioFile from '../../songs/buttercup.mp3'
 const PATH = document.URL.substr(0, document.URL.lastIndexOf('/'));
@@ -7,7 +7,7 @@ const PATH = document.URL.substr(0, document.URL.lastIndexOf('/'));
 function easy() {
     let audioTrack = new Audio(`${PATH}/songs/buttercup.mp3`);
     
-    let keyMapObj = {
+    let keyMap = {
         a:[], s:[], d:[], f:[],
 
         j:[], k:[], l:[], colon:[],
@@ -15,23 +15,28 @@ function easy() {
         space:[]
     };
 
-    keyMapObj["a"].push(new KeyA(defaultImage, 0));
-    keyMapObj["a"].push(new KeyA(defaultImage, -70));
-    keyMapObj["a"].push(new KeyA(defaultImage, -140));
+    keyMap["a"].push(new KeyA(2, 1));
+    keyMap["s"].push(new KeyS(2, 1));
 
-    keyMapObj["s"].push(new KeyS(defaultImage, -100));
-    keyMapObj["s"].push(new KeyS(defaultImage, -140));
-    keyMapObj["s"].push(new KeyS(defaultImage, -240));
-    keyMapObj["s"].push(new KeyS(defaultImage, -290));
-
-    keyMapObj["l"].push(new KeyL(defaultImage, -120));
-    keyMapObj["l"].push(new KeyL(defaultImage, -180));
-
-    keyMapObj["colon"].push(new KeyColon(defaultImage, -220));
-    keyMapObj["colon"].push(new KeyColon(defaultImage, -280));
+    keyMap["a"].push(new KeyA(2, 2));
+    keyMap["s"].push(new KeyS(2, 2));
 
 
-    return [keyMapObj, audioTrack];
+    keyMap["a"].push(new KeyA(2, 3));
+    keyMap["colon"].push(new KeyColon(2, 3));
+    
+    keyMap["l"].push(new KeyL(1, 4));
+    keyMap["l"].push(new KeyL(1, 5));
+
+    keyMap["s"].push(new KeyS(2, 6));
+    keyMap["colon"].push(new KeyColon(2, 6));
+
+    keyMap["s"].push(new KeyS(1, 7));
+
+
+
+
+    return [keyMap, audioTrack];
 }
 
 export default easy;

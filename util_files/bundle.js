@@ -61,7 +61,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _gam
 /*! runtime requirements: __webpack_require__, __webpack_exports__, __webpack_require__.r, __webpack_require__.d, __webpack_require__.* */
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => __WEBPACK_DEFAULT_EXPORT__\n/* harmony export */ });\n/* harmony import */ var _keys__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./keys */ \"./javascript/key_maps/keys.js\");\n/* harmony import */ var _imgs_Alexzander_Archibeque_jpg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../imgs/Alexzander_Archibeque.jpg */ \"./imgs/Alexzander_Archibeque.jpg\");\n\n // import audioFile from '../../songs/buttercup.mp3'\n\nvar PATH = document.URL.substr(0, document.URL.lastIndexOf('/'));\n\nfunction easy() {\n  var audioTrack = new Audio(\"\".concat(PATH, \"/songs/buttercup.mp3\"));\n  var keyMapObj = {\n    a: [],\n    s: [],\n    d: [],\n    f: [],\n    j: [],\n    k: [],\n    l: [],\n    colon: [],\n    space: []\n  };\n  keyMapObj[\"a\"].push(new _keys__WEBPACK_IMPORTED_MODULE_0__.KeyA(_imgs_Alexzander_Archibeque_jpg__WEBPACK_IMPORTED_MODULE_1__.default, 0));\n  keyMapObj[\"a\"].push(new _keys__WEBPACK_IMPORTED_MODULE_0__.KeyA(_imgs_Alexzander_Archibeque_jpg__WEBPACK_IMPORTED_MODULE_1__.default, -70));\n  keyMapObj[\"a\"].push(new _keys__WEBPACK_IMPORTED_MODULE_0__.KeyA(_imgs_Alexzander_Archibeque_jpg__WEBPACK_IMPORTED_MODULE_1__.default, -140));\n  keyMapObj[\"s\"].push(new _keys__WEBPACK_IMPORTED_MODULE_0__.KeyS(_imgs_Alexzander_Archibeque_jpg__WEBPACK_IMPORTED_MODULE_1__.default, -100));\n  keyMapObj[\"s\"].push(new _keys__WEBPACK_IMPORTED_MODULE_0__.KeyS(_imgs_Alexzander_Archibeque_jpg__WEBPACK_IMPORTED_MODULE_1__.default, -140));\n  keyMapObj[\"s\"].push(new _keys__WEBPACK_IMPORTED_MODULE_0__.KeyS(_imgs_Alexzander_Archibeque_jpg__WEBPACK_IMPORTED_MODULE_1__.default, -240));\n  keyMapObj[\"s\"].push(new _keys__WEBPACK_IMPORTED_MODULE_0__.KeyS(_imgs_Alexzander_Archibeque_jpg__WEBPACK_IMPORTED_MODULE_1__.default, -290));\n  keyMapObj[\"l\"].push(new _keys__WEBPACK_IMPORTED_MODULE_0__.KeyL(_imgs_Alexzander_Archibeque_jpg__WEBPACK_IMPORTED_MODULE_1__.default, -120));\n  keyMapObj[\"l\"].push(new _keys__WEBPACK_IMPORTED_MODULE_0__.KeyL(_imgs_Alexzander_Archibeque_jpg__WEBPACK_IMPORTED_MODULE_1__.default, -180));\n  keyMapObj[\"colon\"].push(new _keys__WEBPACK_IMPORTED_MODULE_0__.KeyColon(_imgs_Alexzander_Archibeque_jpg__WEBPACK_IMPORTED_MODULE_1__.default, -220));\n  keyMapObj[\"colon\"].push(new _keys__WEBPACK_IMPORTED_MODULE_0__.KeyColon(_imgs_Alexzander_Archibeque_jpg__WEBPACK_IMPORTED_MODULE_1__.default, -280));\n  return [keyMapObj, audioTrack];\n}\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (easy);\n\n//# sourceURL=webpack://keyrevolution/./javascript/key_maps/easy.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => __WEBPACK_DEFAULT_EXPORT__\n/* harmony export */ });\n/* harmony import */ var _keys__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./keys */ \"./javascript/key_maps/keys.js\");\n/* harmony import */ var _imgs_Alexzander_Archibeque_jpg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../imgs/Alexzander_Archibeque.jpg */ \"./imgs/Alexzander_Archibeque.jpg\");\n\n // import audioFile from '../../songs/buttercup.mp3'\n\nvar PATH = document.URL.substr(0, document.URL.lastIndexOf('/'));\n\nfunction easy() {\n  var audioTrack = new Audio(\"\".concat(PATH, \"/songs/buttercup.mp3\"));\n  var keyMap = {\n    a: [],\n    s: [],\n    d: [],\n    f: [],\n    j: [],\n    k: [],\n    l: [],\n    colon: [],\n    space: []\n  };\n  keyMap[\"a\"].push(new _keys__WEBPACK_IMPORTED_MODULE_0__.KeyA(2, 1));\n  keyMap[\"s\"].push(new _keys__WEBPACK_IMPORTED_MODULE_0__.KeyS(2, 1));\n  keyMap[\"a\"].push(new _keys__WEBPACK_IMPORTED_MODULE_0__.KeyA(2, 2));\n  keyMap[\"s\"].push(new _keys__WEBPACK_IMPORTED_MODULE_0__.KeyS(2, 2));\n  keyMap[\"a\"].push(new _keys__WEBPACK_IMPORTED_MODULE_0__.KeyA(2, 3));\n  keyMap[\"colon\"].push(new _keys__WEBPACK_IMPORTED_MODULE_0__.KeyColon(2, 3));\n  keyMap[\"l\"].push(new _keys__WEBPACK_IMPORTED_MODULE_0__.KeyL(1, 4));\n  keyMap[\"l\"].push(new _keys__WEBPACK_IMPORTED_MODULE_0__.KeyL(1, 5));\n  keyMap[\"s\"].push(new _keys__WEBPACK_IMPORTED_MODULE_0__.KeyS(2, 6));\n  keyMap[\"colon\"].push(new _keys__WEBPACK_IMPORTED_MODULE_0__.KeyColon(2, 6));\n  keyMap[\"s\"].push(new _keys__WEBPACK_IMPORTED_MODULE_0__.KeyS(1, 7));\n  return [keyMap, audioTrack];\n}\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (easy);\n\n//# sourceURL=webpack://keyrevolution/./javascript/key_maps/easy.js?");
 
 /***/ }),
 
@@ -83,7 +83,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /*! runtime requirements: __webpack_require__, __webpack_require__.r, __webpack_exports__, __webpack_require__.d, __webpack_require__.* */
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"KeyA\": () => /* binding */ KeyA,\n/* harmony export */   \"KeyS\": () => /* binding */ KeyS,\n/* harmony export */   \"KeyD\": () => /* binding */ KeyD,\n/* harmony export */   \"KeyF\": () => /* binding */ KeyF,\n/* harmony export */   \"KeyJ\": () => /* binding */ KeyJ,\n/* harmony export */   \"KeyK\": () => /* binding */ KeyK,\n/* harmony export */   \"KeyL\": () => /* binding */ KeyL,\n/* harmony export */   \"KeyColon\": () => /* binding */ KeyColon,\n/* harmony export */   \"KeySpace\": () => /* binding */ KeySpace\n/* harmony export */ });\n/* harmony import */ var _imgs_Alexzander_Archibeque_jpg__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../imgs/Alexzander_Archibeque.jpg */ \"./imgs/Alexzander_Archibeque.jpg\");\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\n\nvar KeyA = function KeyA(img, posY) {\n  _classCallCheck(this, KeyA);\n\n  // Set img to Img Object\n  var keysImg = new Image();\n  keysImg.src = img;\n  this.img = keysImg;\n  this.width = 80;\n  this.height = 80; // Where it starts on the canvas\n\n  this.posX = 10;\n  this.posY = posY;\n};\nvar KeyS = function KeyS(img, posY) {\n  _classCallCheck(this, KeyS);\n\n  // Set img to Img Object\n  var keysImg = new Image();\n  keysImg.src = img;\n  this.img = keysImg;\n  this.width = 80;\n  this.height = 80; // Where it starts on the canvas\n\n  this.posX = 100;\n  this.posY = posY;\n};\nvar KeyD = function KeyD(img, posY) {\n  _classCallCheck(this, KeyD);\n\n  // Set img to Img Object\n  var keysImg = new Image();\n  keysImg.src = img;\n  this.img = keysImg;\n  this.width = 80;\n  this.height = 80; // Where it starts on the canvas\n\n  this.posX = \"placeholder\";\n  this.posY = posY;\n};\nvar KeyF = function KeyF(img, posY) {\n  _classCallCheck(this, KeyF);\n\n  // Set img to Img Object\n  var keysImg = new Image();\n  keysImg.src = img;\n  this.img = keysImg;\n  this.width = 80;\n  this.height = 80; // Where it starts on the canvas\n\n  this.posX = \"placeholder\";\n  this.posY = posY;\n};\nvar KeyJ = function KeyJ(img, posY) {\n  _classCallCheck(this, KeyJ);\n\n  // Set img to Img Object\n  var keysImg = new Image();\n  keysImg.src = img;\n  this.img = keysImg;\n  this.width = 80;\n  this.height = 80; // Where it starts on the canvas\n\n  this.posX = \"placeholder\";\n  this.posY = posY;\n};\nvar KeyK = function KeyK(img, posY) {\n  _classCallCheck(this, KeyK);\n\n  // Set img to Img Object\n  var keysImg = new Image();\n  keysImg.src = img;\n  this.img = keysImg;\n  this.width = 80;\n  this.height = 80; // Where it starts on the canvas\n\n  this.posX = \"placeholder\";\n  this.posY = posY;\n};\nvar KeyL = function KeyL(img, posY) {\n  _classCallCheck(this, KeyL);\n\n  // Set img to Img Object\n  var keysImg = new Image();\n  keysImg.src = img;\n  this.img = keysImg;\n  this.width = 80;\n  this.height = 80; // Where it starts on the canvas\n\n  this.posX = 820;\n  this.posY = posY;\n};\nvar KeyColon = function KeyColon(img, posY) {\n  _classCallCheck(this, KeyColon);\n\n  // Set img to Img Object\n  var keysImg = new Image();\n  keysImg.src = img;\n  this.img = keysImg;\n  this.width = 80;\n  this.height = 80; // Where it starts on the canvas\n\n  this.posX = 910;\n  this.posY = posY;\n};\nvar KeySpace = function KeySpace(img, posY) {\n  _classCallCheck(this, KeySpace);\n\n  // Set img to Img Object\n  var keysImg = new Image();\n  keysImg.src = img;\n  this.img = keysImg;\n  this.width = 80;\n  this.height = 80; // Where it starts on the canvas\n\n  this.posX = \"placeholder\";\n  this.posY = posY;\n};\n\n//# sourceURL=webpack://keyrevolution/./javascript/key_maps/keys.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"KeyA\": () => /* binding */ KeyA,\n/* harmony export */   \"KeyS\": () => /* binding */ KeyS,\n/* harmony export */   \"KeyD\": () => /* binding */ KeyD,\n/* harmony export */   \"KeyF\": () => /* binding */ KeyF,\n/* harmony export */   \"KeyJ\": () => /* binding */ KeyJ,\n/* harmony export */   \"KeyK\": () => /* binding */ KeyK,\n/* harmony export */   \"KeyL\": () => /* binding */ KeyL,\n/* harmony export */   \"KeyColon\": () => /* binding */ KeyColon,\n/* harmony export */   \"KeySpace\": () => /* binding */ KeySpace\n/* harmony export */ });\n/* harmony import */ var _imgs_keys_singles_a_key_png__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../imgs/keys/singles/a-key.png */ \"./imgs/keys/singles/a-key.png\");\n/* harmony import */ var _imgs_keys_singles_s_key_png__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../imgs/keys/singles/s-key.png */ \"./imgs/keys/singles/s-key.png\");\n/* harmony import */ var _imgs_keys_singles_d_key_png__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../imgs/keys/singles/d-key.png */ \"./imgs/keys/singles/d-key.png\");\n/* harmony import */ var _imgs_keys_singles_f_key_png__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../imgs/keys/singles/f-key.png */ \"./imgs/keys/singles/f-key.png\");\n/* harmony import */ var _imgs_keys_singles_j_key_png__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../imgs/keys/singles/j-key.png */ \"./imgs/keys/singles/j-key.png\");\n/* harmony import */ var _imgs_keys_singles_k_key_png__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../imgs/keys/singles/k-key.png */ \"./imgs/keys/singles/k-key.png\");\n/* harmony import */ var _imgs_keys_singles_l_key_png__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../imgs/keys/singles/l-key.png */ \"./imgs/keys/singles/l-key.png\");\n/* harmony import */ var _imgs_keys_singles_colon_key_png__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../imgs/keys/singles/colon-key.png */ \"./imgs/keys/singles/colon-key.png\");\n/* harmony import */ var _imgs_keys_doubles_a2_key_png__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../imgs/keys/doubles/a2-key.png */ \"./imgs/keys/doubles/a2-key.png\");\n/* harmony import */ var _imgs_keys_doubles_s2_key_png__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../imgs/keys/doubles/s2-key.png */ \"./imgs/keys/doubles/s2-key.png\");\n/* harmony import */ var _imgs_keys_doubles_d2_key_png__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../../imgs/keys/doubles/d2-key.png */ \"./imgs/keys/doubles/d2-key.png\");\n/* harmony import */ var _imgs_keys_doubles_f2_key_png__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../../imgs/keys/doubles/f2-key.png */ \"./imgs/keys/doubles/f2-key.png\");\n/* harmony import */ var _imgs_keys_doubles_j2_key_png__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../../imgs/keys/doubles/j2-key.png */ \"./imgs/keys/doubles/j2-key.png\");\n/* harmony import */ var _imgs_keys_doubles_k2_key_png__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../../imgs/keys/doubles/k2-key.png */ \"./imgs/keys/doubles/k2-key.png\");\n/* harmony import */ var _imgs_keys_doubles_l2_key_png__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ../../imgs/keys/doubles/l2-key.png */ \"./imgs/keys/doubles/l2-key.png\");\n/* harmony import */ var _imgs_keys_doubles_colon2_key_png__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ../../imgs/keys/doubles/colon2-key.png */ \"./imgs/keys/doubles/colon2-key.png\");\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nvar KeyA = function KeyA(img, posY) {\n  _classCallCheck(this, KeyA);\n\n  // Set img to Img Object\n  var keysImg = new Image();\n\n  if (img === 1) {\n    keysImg.src = _imgs_keys_singles_a_key_png__WEBPACK_IMPORTED_MODULE_0__.default;\n  } else if (img === 2) {\n    keysImg.src = _imgs_keys_doubles_a2_key_png__WEBPACK_IMPORTED_MODULE_8__.default;\n  }\n\n  this.img = keysImg;\n  this.width = 80;\n  this.height = 80; // Where it starts on the canvas\n\n  this.posX = 10;\n  this.posY = posY * 100 * -1;\n};\nvar KeyS = function KeyS(img, posY) {\n  _classCallCheck(this, KeyS);\n\n  // Set img to Img Object\n  var keysImg = new Image();\n\n  if (img === 1) {\n    keysImg.src = _imgs_keys_singles_s_key_png__WEBPACK_IMPORTED_MODULE_1__.default;\n  } else if (img === 2) {\n    keysImg.src = _imgs_keys_doubles_s2_key_png__WEBPACK_IMPORTED_MODULE_9__.default;\n  }\n\n  this.img = keysImg;\n  this.width = 80;\n  this.height = 80; // Where it starts on the canvas\n\n  this.posX = 100;\n  this.posY = posY * 100 * -1;\n};\nvar KeyD = function KeyD(img, posY) {\n  _classCallCheck(this, KeyD);\n\n  // Set img to Img Object\n  var keysImg = new Image();\n  keysImg.src = img;\n  this.img = keysImg;\n  this.width = 80;\n  this.height = 80; // Where it starts on the canvas\n\n  this.posX = \"placeholder\";\n  this.posY = posY * 100 * -1;\n};\nvar KeyF = function KeyF(img, posY) {\n  _classCallCheck(this, KeyF);\n\n  // Set img to Img Object\n  var keysImg = new Image();\n  keysImg.src = img;\n  this.img = keysImg;\n  this.width = 80;\n  this.height = 80; // Where it starts on the canvas\n\n  this.posX = \"placeholder\";\n  this.posY = posY * 100 * -1;\n};\nvar KeyJ = function KeyJ(img, posY) {\n  _classCallCheck(this, KeyJ);\n\n  // Set img to Img Object\n  var keysImg = new Image();\n  keysImg.src = img;\n  this.img = keysImg;\n  this.width = 80;\n  this.height = 80; // Where it starts on the canvas\n\n  this.posX = \"placeholder\";\n  this.posY = posY * 100 * -1;\n};\nvar KeyK = function KeyK(img, posY) {\n  _classCallCheck(this, KeyK);\n\n  // Set img to Img Object\n  var keysImg = new Image();\n  keysImg.src = img;\n  this.img = keysImg;\n  this.width = 80;\n  this.height = 80; // Where it starts on the canvas\n\n  this.posX = \"placeholder\";\n  this.posY = posY * 100 * -1;\n};\nvar KeyL = function KeyL(img, posY) {\n  _classCallCheck(this, KeyL);\n\n  // Set img to Img Object\n  var keysImg = new Image();\n\n  if (img === 1) {\n    keysImg.src = _imgs_keys_singles_l_key_png__WEBPACK_IMPORTED_MODULE_6__.default;\n  } else if (img === 2) {\n    keysImg.src = _imgs_keys_doubles_l2_key_png__WEBPACK_IMPORTED_MODULE_14__.default;\n  }\n\n  this.img = keysImg;\n  this.width = 80;\n  this.height = 80; // Where it starts on the canvas\n\n  this.posX = 820;\n  this.posY = posY * 100 * -1;\n};\nvar KeyColon = function KeyColon(img, posY) {\n  _classCallCheck(this, KeyColon);\n\n  // Set img to Img Object\n  var keysImg = new Image();\n\n  if (img === 1) {\n    keysImg.src = _imgs_keys_singles_colon_key_png__WEBPACK_IMPORTED_MODULE_7__.default;\n  } else if (img === 2) {\n    keysImg.src = _imgs_keys_doubles_colon2_key_png__WEBPACK_IMPORTED_MODULE_15__.default;\n  }\n\n  this.img = keysImg;\n  this.width = 80;\n  this.height = 80; // Where it starts on the canvas\n\n  this.posX = 910;\n  this.posY = posY * 100 * -1;\n};\nvar KeySpace = function KeySpace(img, posY) {\n  _classCallCheck(this, KeySpace);\n\n  // Set img to Img Object\n  var keysImg = new Image();\n  keysImg.src = img;\n  this.img = keysImg;\n  this.width = 80;\n  this.height = 80; // Where it starts on the canvas\n\n  this.posX = \"placeholder\";\n  this.posY = posY * 100 * -1;\n};\n\n//# sourceURL=webpack://keyrevolution/./javascript/key_maps/keys.js?");
 
 /***/ }),
 
@@ -112,6 +112,230 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => __WEBPACK_DEFAULT_EXPORT__\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + \"79f8fbc765311938314ba7e00984144b.jpg\");\n\n//# sourceURL=webpack://keyrevolution/./imgs/Alexzander_Archibeque.jpg?");
+
+/***/ }),
+
+/***/ "./imgs/keys/doubles/a2-key.png":
+/*!**************************************!*\
+  !*** ./imgs/keys/doubles/a2-key.png ***!
+  \**************************************/
+/*! namespace exports */
+/*! export default [provided] [no usage info] [missing usage info prevents renaming] */
+/*! other exports [not provided] [no usage info] */
+/*! runtime requirements: __webpack_exports__, __webpack_require__.r, __webpack_require__.p, __webpack_require__.d, __webpack_require__.* */
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => __WEBPACK_DEFAULT_EXPORT__\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + \"cd08e9ed478e704e31622cec5bac0bd9.png\");\n\n//# sourceURL=webpack://keyrevolution/./imgs/keys/doubles/a2-key.png?");
+
+/***/ }),
+
+/***/ "./imgs/keys/doubles/colon2-key.png":
+/*!******************************************!*\
+  !*** ./imgs/keys/doubles/colon2-key.png ***!
+  \******************************************/
+/*! namespace exports */
+/*! export default [provided] [no usage info] [missing usage info prevents renaming] */
+/*! other exports [not provided] [no usage info] */
+/*! runtime requirements: __webpack_exports__, __webpack_require__.r, __webpack_require__.p, __webpack_require__.d, __webpack_require__.* */
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => __WEBPACK_DEFAULT_EXPORT__\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + \"dc37e7af308a1c5bc4a5b562b75d75b1.png\");\n\n//# sourceURL=webpack://keyrevolution/./imgs/keys/doubles/colon2-key.png?");
+
+/***/ }),
+
+/***/ "./imgs/keys/doubles/d2-key.png":
+/*!**************************************!*\
+  !*** ./imgs/keys/doubles/d2-key.png ***!
+  \**************************************/
+/*! namespace exports */
+/*! export default [provided] [no usage info] [missing usage info prevents renaming] */
+/*! other exports [not provided] [no usage info] */
+/*! runtime requirements: __webpack_exports__, __webpack_require__.r, __webpack_require__.p, __webpack_require__.d, __webpack_require__.* */
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => __WEBPACK_DEFAULT_EXPORT__\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + \"a326f56e7708fd6b5ca5ea04200db24e.png\");\n\n//# sourceURL=webpack://keyrevolution/./imgs/keys/doubles/d2-key.png?");
+
+/***/ }),
+
+/***/ "./imgs/keys/doubles/f2-key.png":
+/*!**************************************!*\
+  !*** ./imgs/keys/doubles/f2-key.png ***!
+  \**************************************/
+/*! namespace exports */
+/*! export default [provided] [no usage info] [missing usage info prevents renaming] */
+/*! other exports [not provided] [no usage info] */
+/*! runtime requirements: __webpack_exports__, __webpack_require__.r, __webpack_require__.p, __webpack_require__.d, __webpack_require__.* */
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => __WEBPACK_DEFAULT_EXPORT__\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + \"1e73d63860aa61fbec004cc6311580ac.png\");\n\n//# sourceURL=webpack://keyrevolution/./imgs/keys/doubles/f2-key.png?");
+
+/***/ }),
+
+/***/ "./imgs/keys/doubles/j2-key.png":
+/*!**************************************!*\
+  !*** ./imgs/keys/doubles/j2-key.png ***!
+  \**************************************/
+/*! namespace exports */
+/*! export default [provided] [no usage info] [missing usage info prevents renaming] */
+/*! other exports [not provided] [no usage info] */
+/*! runtime requirements: __webpack_exports__, __webpack_require__.r, __webpack_require__.p, __webpack_require__.d, __webpack_require__.* */
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => __WEBPACK_DEFAULT_EXPORT__\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + \"1ea09369b3b279e8c9015d42ea9c91c8.png\");\n\n//# sourceURL=webpack://keyrevolution/./imgs/keys/doubles/j2-key.png?");
+
+/***/ }),
+
+/***/ "./imgs/keys/doubles/k2-key.png":
+/*!**************************************!*\
+  !*** ./imgs/keys/doubles/k2-key.png ***!
+  \**************************************/
+/*! namespace exports */
+/*! export default [provided] [no usage info] [missing usage info prevents renaming] */
+/*! other exports [not provided] [no usage info] */
+/*! runtime requirements: __webpack_exports__, __webpack_require__.r, __webpack_require__.p, __webpack_require__.d, __webpack_require__.* */
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => __WEBPACK_DEFAULT_EXPORT__\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + \"93f65144bb204363e9968424c009b886.png\");\n\n//# sourceURL=webpack://keyrevolution/./imgs/keys/doubles/k2-key.png?");
+
+/***/ }),
+
+/***/ "./imgs/keys/doubles/l2-key.png":
+/*!**************************************!*\
+  !*** ./imgs/keys/doubles/l2-key.png ***!
+  \**************************************/
+/*! namespace exports */
+/*! export default [provided] [no usage info] [missing usage info prevents renaming] */
+/*! other exports [not provided] [no usage info] */
+/*! runtime requirements: __webpack_exports__, __webpack_require__.r, __webpack_require__.p, __webpack_require__.d, __webpack_require__.* */
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => __WEBPACK_DEFAULT_EXPORT__\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + \"a1c52481341d298317c406bdaeeae00d.png\");\n\n//# sourceURL=webpack://keyrevolution/./imgs/keys/doubles/l2-key.png?");
+
+/***/ }),
+
+/***/ "./imgs/keys/doubles/s2-key.png":
+/*!**************************************!*\
+  !*** ./imgs/keys/doubles/s2-key.png ***!
+  \**************************************/
+/*! namespace exports */
+/*! export default [provided] [no usage info] [missing usage info prevents renaming] */
+/*! other exports [not provided] [no usage info] */
+/*! runtime requirements: __webpack_exports__, __webpack_require__.r, __webpack_require__.p, __webpack_require__.d, __webpack_require__.* */
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => __WEBPACK_DEFAULT_EXPORT__\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + \"063eaeae470348956ced0cc324089707.png\");\n\n//# sourceURL=webpack://keyrevolution/./imgs/keys/doubles/s2-key.png?");
+
+/***/ }),
+
+/***/ "./imgs/keys/singles/a-key.png":
+/*!*************************************!*\
+  !*** ./imgs/keys/singles/a-key.png ***!
+  \*************************************/
+/*! namespace exports */
+/*! export default [provided] [no usage info] [missing usage info prevents renaming] */
+/*! other exports [not provided] [no usage info] */
+/*! runtime requirements: __webpack_exports__, __webpack_require__.r, __webpack_require__.p, __webpack_require__.d, __webpack_require__.* */
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => __WEBPACK_DEFAULT_EXPORT__\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + \"f13dc0de7323a1f969b2bc715cfbbfc2.png\");\n\n//# sourceURL=webpack://keyrevolution/./imgs/keys/singles/a-key.png?");
+
+/***/ }),
+
+/***/ "./imgs/keys/singles/colon-key.png":
+/*!*****************************************!*\
+  !*** ./imgs/keys/singles/colon-key.png ***!
+  \*****************************************/
+/*! namespace exports */
+/*! export default [provided] [no usage info] [missing usage info prevents renaming] */
+/*! other exports [not provided] [no usage info] */
+/*! runtime requirements: __webpack_exports__, __webpack_require__.r, __webpack_require__.p, __webpack_require__.d, __webpack_require__.* */
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => __WEBPACK_DEFAULT_EXPORT__\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + \"325bf04f5582a5b14ea3fe3deb90104d.png\");\n\n//# sourceURL=webpack://keyrevolution/./imgs/keys/singles/colon-key.png?");
+
+/***/ }),
+
+/***/ "./imgs/keys/singles/d-key.png":
+/*!*************************************!*\
+  !*** ./imgs/keys/singles/d-key.png ***!
+  \*************************************/
+/*! namespace exports */
+/*! export default [provided] [no usage info] [missing usage info prevents renaming] */
+/*! other exports [not provided] [no usage info] */
+/*! runtime requirements: __webpack_exports__, __webpack_require__.r, __webpack_require__.p, __webpack_require__.d, __webpack_require__.* */
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => __WEBPACK_DEFAULT_EXPORT__\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + \"199c37ff7860b5d39b69584febc2b449.png\");\n\n//# sourceURL=webpack://keyrevolution/./imgs/keys/singles/d-key.png?");
+
+/***/ }),
+
+/***/ "./imgs/keys/singles/f-key.png":
+/*!*************************************!*\
+  !*** ./imgs/keys/singles/f-key.png ***!
+  \*************************************/
+/*! namespace exports */
+/*! export default [provided] [no usage info] [missing usage info prevents renaming] */
+/*! other exports [not provided] [no usage info] */
+/*! runtime requirements: __webpack_exports__, __webpack_require__.r, __webpack_require__.p, __webpack_require__.d, __webpack_require__.* */
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => __WEBPACK_DEFAULT_EXPORT__\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + \"dab5caa64a255e06f9928b1c59005766.png\");\n\n//# sourceURL=webpack://keyrevolution/./imgs/keys/singles/f-key.png?");
+
+/***/ }),
+
+/***/ "./imgs/keys/singles/j-key.png":
+/*!*************************************!*\
+  !*** ./imgs/keys/singles/j-key.png ***!
+  \*************************************/
+/*! namespace exports */
+/*! export default [provided] [no usage info] [missing usage info prevents renaming] */
+/*! other exports [not provided] [no usage info] */
+/*! runtime requirements: __webpack_exports__, __webpack_require__.r, __webpack_require__.p, __webpack_require__.d, __webpack_require__.* */
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => __WEBPACK_DEFAULT_EXPORT__\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + \"0d1f66da2880be5fcd377fae1dc2501e.png\");\n\n//# sourceURL=webpack://keyrevolution/./imgs/keys/singles/j-key.png?");
+
+/***/ }),
+
+/***/ "./imgs/keys/singles/k-key.png":
+/*!*************************************!*\
+  !*** ./imgs/keys/singles/k-key.png ***!
+  \*************************************/
+/*! namespace exports */
+/*! export default [provided] [no usage info] [missing usage info prevents renaming] */
+/*! other exports [not provided] [no usage info] */
+/*! runtime requirements: __webpack_exports__, __webpack_require__.r, __webpack_require__.p, __webpack_require__.d, __webpack_require__.* */
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => __WEBPACK_DEFAULT_EXPORT__\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + \"c3ed66da8ff4702e4c295309f989018c.png\");\n\n//# sourceURL=webpack://keyrevolution/./imgs/keys/singles/k-key.png?");
+
+/***/ }),
+
+/***/ "./imgs/keys/singles/l-key.png":
+/*!*************************************!*\
+  !*** ./imgs/keys/singles/l-key.png ***!
+  \*************************************/
+/*! namespace exports */
+/*! export default [provided] [no usage info] [missing usage info prevents renaming] */
+/*! other exports [not provided] [no usage info] */
+/*! runtime requirements: __webpack_exports__, __webpack_require__.r, __webpack_require__.p, __webpack_require__.d, __webpack_require__.* */
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => __WEBPACK_DEFAULT_EXPORT__\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + \"e649d7ec6a8581071b3144a0c9c33c7f.png\");\n\n//# sourceURL=webpack://keyrevolution/./imgs/keys/singles/l-key.png?");
+
+/***/ }),
+
+/***/ "./imgs/keys/singles/s-key.png":
+/*!*************************************!*\
+  !*** ./imgs/keys/singles/s-key.png ***!
+  \*************************************/
+/*! namespace exports */
+/*! export default [provided] [no usage info] [missing usage info prevents renaming] */
+/*! other exports [not provided] [no usage info] */
+/*! runtime requirements: __webpack_exports__, __webpack_require__.r, __webpack_require__.p, __webpack_require__.d, __webpack_require__.* */
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => __WEBPACK_DEFAULT_EXPORT__\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + \"7fe09b83b489e0bf1b701b113daa219f.png\");\n\n//# sourceURL=webpack://keyrevolution/./imgs/keys/singles/s-key.png?");
 
 /***/ })
 
