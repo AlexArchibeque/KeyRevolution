@@ -46,4 +46,37 @@ body {
 #countdown-box {
     display: none;
     font-size: 50px;
+    z-index: 4;
+}
+
+/* Instructions footer */
+
+.links-div-main {
+    display: flex;
+    width: 400px;
+    
+}
+
+.links-div-main > a > img {
+    width: 70px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.footer-instructions {
+    display: flex;
+    margin-top: -70px;
+}
+
+.instructions{
+     width: 600px;
+}
+
+.instructions > p {
+    font-size: 20px;
+}
+
+.instructions > p > strong {
+    font-size: 30px;
+    font-weight: 500;
 }

@@ -94,12 +94,13 @@ class Game {
     // End of Audio Methods
     handleKeyAnimation(button){
         let currentButton = document.getElementById(button);
-
-        currentButton.className = "pressed-button";
-
-        setTimeout(() => {
-            currentButton.className = "";
-        },100)
+        if(currentButton.className != "disabled-button"){
+            currentButton.className = "pressed-button";
+    
+            setTimeout(() => {
+                currentButton.className = "";
+            },100)
+        }
 
     }
 
@@ -220,6 +221,7 @@ class Game {
             modal.style.display = "block";
             this.scoreScreen = true;
             this.audio.pause();
+            
         }
     }
 

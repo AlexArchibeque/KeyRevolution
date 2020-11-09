@@ -1,5 +1,4 @@
 import {KeyA, KeyS, KeyColon, KeyL} from './keys'
-import defaultImage from '../../imgs/Alexzander_Archibeque.jpg';
 // import audioFile from '../../songs/buttercup.mp3'
 const PATH = document.URL.substr(0, document.URL.lastIndexOf('/'));
 
