@@ -1,7 +1,11 @@
-
+body {
+    background-color: slateGrey;
+    font-family: 'ABeeZee'
+}
 
 #game-canvas {
-    border: 3px solid black;
+    background-color: #f5f5dc;
+    border-radius:3px;
 }
 
 .game-and-difficulties-container{

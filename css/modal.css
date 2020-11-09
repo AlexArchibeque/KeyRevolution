@@ -14,10 +14,10 @@
   
 
 .score-screen-content {
-    background-color: #fefefe;
+    background-color: #f5f5dc;
     margin: 20% auto; 
     padding: 10px;
-    border: 1px solid #888;
+    border: 1px solid black;
     width: 25%; 
     border-radius: 10px;
 
@@ -115,7 +115,9 @@
     font-size: 30px;
 }
 
+
 /* Start Screen Modal */
+
 .modal-start {
     display: block; 
     position: fixed; 
@@ -130,7 +132,8 @@
 }
 
 .start-screen-content{
-    background-color: #fefefe;
+    background-color: #f5f5dc;
+    border: 1px solid black;
     margin: 20% auto; 
     padding: 10px;
     border: 1px solid #888;
@@ -170,6 +173,15 @@
 #start-button {
     width: 200px;
     height: 50px;
-    background-color: green;
+    font-size: 30px;
+    font-weight: 500;
+    color: blue;
+    background-color: slategrey;
+    border:none;
+    border-radius: 5px;
+}
 
+#start-button:hover {
+    background-color: grey;
+    color: lightblue;
 }
