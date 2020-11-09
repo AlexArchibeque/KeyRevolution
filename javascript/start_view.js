@@ -12,12 +12,12 @@ class StartView {
         startButton.addEventListener("click", () => {
             startScreen.style.display = "none";
             //For testing ***
-            // this.game.audio.play();
-            // this.game.stopAudio();
-            // this.game.start();
-
             this.game.stopAudio();
-            this.game.startTimer();
+            this.game.audio.play();
+            this.game.start();
+
+            // this.game.stopAudio();
+            // this.game.startTimer();
         })
     }
 }

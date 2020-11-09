@@ -22,7 +22,7 @@
 
 
 .left-side-button-container {
-    
+
 }
 
 .right-side-button-container {
@@ -35,7 +35,29 @@
     width: 80px;
     height: 40px;
     margin: 5px;
+    font-size: 40px;
+    background-color: slategray;
+    opacity: 0.5;
+    border: none;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 5px;
 }
+
+.button-inner-text {
+    color: red;
+}
+
+
+.left-side-button-container > .pressed-button,
+.right-side-button-container > .pressed-button {
+    opacity: 0.9;
+}
+
+
 
 #space-button {
     width: 200px;

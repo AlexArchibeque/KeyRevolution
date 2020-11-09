@@ -92,9 +92,20 @@ class Game {
 
 
     // End of Audio Methods
+    handleKeyAnimation(button){
+        let currentButton = document.getElementById(button);
+
+        currentButton.className = "pressed-button";
+
+        setTimeout(() => {
+            currentButton.className = "";
+        },100)
+
+    }
 
     handleKey(button, key){
         // Handles if there are no keys left.
+        this.handleKeyAnimation(button)
         if(this.keys[key].length === 0){
             return;
         }
