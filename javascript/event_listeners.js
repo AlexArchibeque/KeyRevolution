@@ -100,18 +100,18 @@ const eventListeners = (canvas,game,ctx) => {
             case "KeyF": // F Key
                 game.handleKey("f-button","f");
                 return;
-            case "KeyJ": // J Key
-                game.handleKey("j-button","j");
-                return;
-            case "KeyK": // K Key
-                game.handleKey("k-button","k");
-                return;
-            case "KeyL": // L Key
-                game.handleKey("l-button","l");
-                return;
-            case "Semicolon": // : Key
-                game.handleKey("colon-button","colon");
-                return;
+            // case "KeyJ": // J Key
+            //     game.handleKey("j-button","j");
+            //     return;
+            // case "KeyK": // K Key
+            //     game.handleKey("k-button","k");
+            //     return;
+            // case "KeyL": // L Key
+            //     game.handleKey("l-button","l");
+            //     return;
+            // case "Semicolon": // : Key
+            //     game.handleKey("colon-button","colon");
+            //     return;
             case "Space": // space Key
                 game.handleKey("space-button","space");
                 return;

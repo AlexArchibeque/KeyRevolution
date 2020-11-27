@@ -61,6 +61,7 @@ class Game {
             let easyArr = easy();
             this.keys = easyArr[0];
             this.audio = easyArr[1];
+
             this.currentKeyMap = "easy";
         }else if(difficulty === "medium"){
 

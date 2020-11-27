@@ -77,7 +77,7 @@ export class KeyD {
         this.width = 80;
         this.height = 80;
         // Where it starts on the canvas
-        this.posX = "placeholder";
+        this.posX = 190;
         this.posY = (posY * 100) * -1;
     }
 }
@@ -99,7 +99,7 @@ export class KeyF {
         this.width = 80;
         this.height = 80;
         // Where it starts on the canvas
-        this.posX = "placeholder";
+        this.posX = 280;
         this.posY = (posY * 100) * -1;
     }
 }
