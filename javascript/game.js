@@ -265,6 +265,7 @@ class Game {
             
         }else if(key === "escape"){
             // Editer console.log
+            console.clear();
             console.log(this.editKeyMap)
 
             this.gameOver ? this.gameOver = false : this.gameOver = true;
