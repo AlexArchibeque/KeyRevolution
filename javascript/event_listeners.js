@@ -90,15 +90,19 @@ const eventListeners = (canvas,game,ctx) => {
         switch(event.code){
             case "KeyA": // A Key
                 game.handleKey("a-button","a");
+                game.editMode("a")
                 return;
             case "KeyS": // S Key
                 game.handleKey("s-button","s");
+                game.editMode("s")
                 return;
             case "KeyD": // D Key
                 game.handleKey("d-button","d");
+                game.editMode("d")
                 return;
             case "KeyF": // F Key
                 game.handleKey("f-button","f");
+                game.editMode("f")
                 return;
             // case "KeyJ": // J Key
             //     game.handleKey("j-button","j");

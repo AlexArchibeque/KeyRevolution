@@ -2,6 +2,7 @@ import eventListeners from './event_listeners';
 
 //Difficulties
 import easy from './key_maps/easy';
+import { keyA, KeyA } from './key_maps/keys'
 
 class Game { 
     constructor(canvas, width, height){
@@ -17,7 +18,7 @@ class Game {
 
 
         this.keys = {
-            a:[],
+            a:[new KeyA(1,100)],
             s:[],
             d:[],
             f:[],
@@ -29,6 +30,12 @@ class Game {
 
             space:[]
         };
+        this.editKeyMap = {
+            a:[],
+            s:[],
+            d:[],
+            f:[]
+        }
 
         // Current Score
         this.score = {
@@ -53,7 +60,14 @@ class Game {
         this.ctx = this.canvas.getContext("2d");
 
         eventListeners(this.canvas, this, this.ctx);
-        this.setKeyMap("easy");
+        // this.setKeyMap("easy");
+        this.setKeyMap('edit');
+    }
+
+    editMode(key){
+        let i = 0
+        this.editKeyMap[`${key}`].push({[key]: this.frameCount})
+        i = i++
     }
 
     setKeyMap(difficulty){
@@ -67,6 +81,11 @@ class Game {
 
         }else if(difficulty === "hard"){
 
+        }else if(difficulty === "edit"){
+            let easyArr = easy();
+            this.audio = easyArr[1]
+
+            this.currentKeyMap = "edit"
         }else{
 
         }
@@ -244,8 +263,10 @@ class Game {
             this.showPauseScreen();
             this.handleReset();
             
-        } else if(key === "escape"){
-            
+        }else if(key === "escape"){
+            // Editer console.log
+            console.log(this.editKeyMap)
+
             this.gameOver ? this.gameOver = false : this.gameOver = true;
 
             // If score screen is up.
