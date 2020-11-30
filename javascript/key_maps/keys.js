@@ -36,7 +36,7 @@ export class KeyA {
         this.height = 80;
         // Where it starts on the canvas
         this.posX = 10;
-        this.posY = (posY * 100) * -1;
+        this.posY = posY;
     }
 }
 
@@ -57,7 +57,7 @@ export class KeyS {
         this.height = 80;
         // Where it starts on the canvas
         this.posX = 100;
-        this.posY = (posY * 100) * -1;
+        this.posY = posY;
     }
 }
 
@@ -78,7 +78,7 @@ export class KeyD {
         this.height = 80;
         // Where it starts on the canvas
         this.posX = 190;
-        this.posY = (posY * 100) * -1;
+        this.posY = posY;
     }
 }
 
@@ -100,7 +100,7 @@ export class KeyF {
         this.height = 80;
         // Where it starts on the canvas
         this.posX = 280;
-        this.posY = (posY * 100) * -1;
+        this.posY = posY;
     }
 }
 
@@ -122,7 +122,7 @@ export class KeyJ {
         this.height = 80;
         // Where it starts on the canvas
         this.posX = "placeholder";
-        this.posY = (posY * 100) * -1;
+        this.posY = posY;
     }
 }
 
@@ -144,7 +144,7 @@ export class KeyK {
         this.height = 80;
         // Where it starts on the canvas
         this.posX = "placeholder";
-        this.posY = (posY * 100) * -1;
+        this.posY = posY;
     }
 }
 
@@ -165,7 +165,7 @@ export class KeyL {
         this.height = 80;
         // Where it starts on the canvas
         this.posX = 820;
-        this.posY = (posY * 100) * -1;
+        this.posY = posY;
     }
 }
 
@@ -188,7 +188,7 @@ export class KeyColon {
         this.height = 80;
         // Where it starts on the canvas
         this.posX = 910;
-        this.posY = (posY * 100) * -1;
+        this.posY = posY;
     }
 }
 
@@ -204,7 +204,7 @@ export class KeySpace {
         this.height = 80;
         // Where it starts on the canvas
         this.posX = "placeholder";
-        this.posY = (posY * 100) * -1;
+        this.posY = posY;
     }
 }
 

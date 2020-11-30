@@ -18,73 +18,31 @@ function easy() {
         space:[]
     };
 
-    // keyMap["a"].push(new KeyA());
-    // keyMap["s"].push(new KeyS());
-    // keyMap["l"].push(new KeyL());
-    // keyMap["colon"].push(new KeyColon());
-    keyMap["d"].push(new KeyD(1, 1.0))
 
-    keyMap["a"].push(new KeyA(2, 4.5));
-    keyMap["s"].push(new KeyS(2, 4.5));
+    let a = [210, 529, 917, 1162, 1401, 1999, 2061, 2661, 2838, 3320, 3797, 4216, 4399]
+    let d = [322, 798, 981, 1222, 1579, 1879, 2183, 2360, 2420, 2599, 2901, 2991, 3380, 3470, 3917, 4100, 4280, 4518]
+    let f = [380, 504, 859, 1044, 1283, 1641, 1761, 1879, 2241, 2299, 2360, 2479, 2962, 3442, 3981, 4038, 4400]
+    let s = [265, 439, 624, 918, 1101, 1340, 1402, 1700, 1940, 2121, 2539, 2871, 3021, 3348, 3500, 3858, 4159, 4280, 4518]
 
-    keyMap["d"].push(new KeyD(1, 5.8));
+    a.forEach( posY => { 
+        let key = new KeyA(1, (posY - 470)* -1)
+        keyMap["a"].push(key)
+    })
 
-    keyMap["a"].push(new KeyA(2, 6.8));
-    keyMap["s"].push(new KeyS(2, 6.8));
+    s.forEach( posY => { 
+        let key = new KeyS(1, (posY - 470)* -1)
+        keyMap["s"].push(key)
+    })
 
-    keyMap["d"].push(new KeyD(1,7.2))
+    d.forEach( posY => { 
+        let key = new KeyD(1, (posY - 470)* -1)
+        keyMap["d"].push(key)
+    })
 
-    keyMap["d"].push(new KeyD(1, 8))
-
-    keyMap["a"].push(new KeyA(2, 9.2));
-    keyMap["f"].push(new KeyF(2, 9.2));
-
-    keyMap["s"].push(new KeyS(2, 10.5));
-    keyMap["f"].push(new KeyF(2, 10.5));
-
-    keyMap["d"].push(new KeyD(2, 11.5));
-    keyMap["a"].push(new KeyA(2, 11.5));
-
-    keyMap["a"].push(new KeyA(2, 12.5));
-    keyMap["s"].push(new KeyS(2, 12.5));
-
-    keyMap["d"].push(new KeyD(2, 13));
-    keyMap["f"].push(new KeyF(2, 13));
-
-    keyMap["d"].push(new KeyD(1, 13.5));
-    keyMap["f"].push(new KeyF(1, 14));
-
-    keyMap["a"].push(new KeyA(1, 14.5));
-    keyMap["s"].push(new KeyS(1, 15.2));
-
-    keyMap["a"].push(new KeyA(1, 16));
-    keyMap["s"].push(new KeyS(1, 17));
-
-    keyMap["d"].push(new KeyD(1, 17.5));
-    keyMap["f"].push(new KeyF(1, 18.2));
-
-    keyMap["d"].push(new KeyD(1, 19));
-    keyMap["f"].push(new KeyF(1, 20));
-
-
-    keyMap["a"].push(new KeyA(2, 21));
-    keyMap["s"].push(new KeyS(2, 21));
-
-    keyMap["d"].push(new KeyD(1, 22.5));
-    keyMap["f"].push(new KeyF(1, 23.5)); // Beat drop
-
-    keyMap["a"].push(new KeyA(1, 24));
-    keyMap["s"].push(new KeyS(1, 24.5));
-    keyMap["d"].push(new KeyD(1, 25));
-    keyMap["f"].push(new KeyF(1, 25.5));
-
-    keyMap["a"].push(new KeyA(1, 26));
-    keyMap["s"].push(new KeyS(1, 26.5));
-    keyMap["d"].push(new KeyD(1, 27));
-    keyMap["f"].push(new KeyF(1, 27.5));
-
-    keyMap["a"].push(new KeyA(2, 28));
-    keyMap["s"].push(new KeyS(2, 28));
+    f.forEach( posY => { 
+        let key = new KeyF(1, (posY - 470)* -1)
+        keyMap["f"].push(key)
+    })
 
     return [keyMap, audioTrack];
 }

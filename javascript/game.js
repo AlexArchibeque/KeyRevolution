@@ -1,8 +1,14 @@
 import eventListeners from './event_listeners';
 
+
 //Difficulties
 import easy from './key_maps/easy';
-import { keyA, KeyA } from './key_maps/keys'
+import medium from './key_maps/medium';
+import hard from './key_maps/hard';
+
+
+// Edit Key
+import { KeyA } from './key_maps/keys'
 
 class Game { 
     constructor(canvas, width, height){
@@ -18,7 +24,8 @@ class Game {
 
 
         this.keys = {
-            a:[new KeyA(1,100)],
+            // a:[new KeyA(1,-10000)],
+            a:[],
             s:[],
             d:[],
             f:[],
@@ -60,17 +67,28 @@ class Game {
         this.ctx = this.canvas.getContext("2d");
 
         eventListeners(this.canvas, this, this.ctx);
-        // this.setKeyMap("easy");
-        this.setKeyMap('edit');
+        this.setKeyMap("easy");
     }
 
     editMode(key){
         let i = 0
-        this.editKeyMap[`${key}`].push({[key]: this.frameCount})
+        this.editKeyMap[`${key}`].push(this.frameCount)
         i = i++
     }
 
     setKeyMap(difficulty){
+        if(this.audio){
+            this.audio.pause()
+        }
+
+        this.frameCount = 0
+        this.score = {
+            perfect:0,
+            ok:0,
+            bad:0,
+            missed: 0
+        }
+
         if(difficulty === "easy"){
             let easyArr = easy();
             this.keys = easyArr[0];
@@ -78,13 +96,41 @@ class Game {
 
             this.currentKeyMap = "easy";
         }else if(difficulty === "medium"){
+            let mediumArr = medium();
+            this.keys = mediumArr[0];
+            this.audio = mediumArr[1];
+            
 
+            this.currentKeyMap = "medium"
         }else if(difficulty === "hard"){
+            let hardArr = hard();
+            this.keys = hardArr[0];
+            this.audio = hardArr[1];
+
+            this.currentKeyMap = "hard"
 
         }else if(difficulty === "edit"){
             let easyArr = easy();
             this.audio = easyArr[1]
-
+            this.keys = {
+                a:[new KeyA(1,-10000)],
+                s:[],
+                d:[],
+                f:[],
+    
+                j:[],
+                k:[],
+                l:[],
+                colon:[],
+    
+                space:[]
+            };
+            this.editKeyMap = {
+                a:[],
+                s:[],
+                d:[],
+                f:[]
+            }
             this.currentKeyMap = "edit"
         }else{
 
@@ -264,9 +310,10 @@ class Game {
             this.handleReset();
             
         }else if(key === "escape"){
-            // Editer console.log
-            console.clear();
-            console.log(this.editKeyMap)
+            if(this.currentKeyMap === "edit"){
+                console.clear();
+                console.log(this.editKeyMap)
+            }
 
             this.gameOver ? this.gameOver = false : this.gameOver = true;
 

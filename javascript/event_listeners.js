@@ -9,58 +9,33 @@ const eventListeners = (canvas,game,ctx) => {
         "j-button","k-button","l-button","colon-button",
         "space-button"]
 
+    const edit = document.getElementById("edit-button");
+    edit.onclick = () => {
+        game.setKeyMap("edit")
+        game.stop("escape")
+    }
+
     const easy = document.getElementById("easy-button");
     easy.onclick = () => {
-        BUTTON_NAMES.forEach(idName => {
-            let ele = document.getElementById(idName)
-            if(idName === "a-button" || idName === "s-button" || idName === "l-button" || idName === "colon-button"){
-                ele.className = idName;
-            }else{
-                ele.className = "disabled-button";
-            }
-        })
-
         game.setKeyMap("easy")
+        game.stop("escape")
     }
     
     const medium = document.getElementById("medium-button");
     medium.onclick = () => {
-        BUTTON_NAMES.forEach(idName => {
-            let ele = document.getElementById(idName)
-            if(idName === "a-button" || idName === "s-button" || idName === "l-button" || idName === "colon-button"
-                || idName === "d-button" || idName === "k-button" ){
-                ele.className = idName;
-            }else{
-                ele.className = "disabled-button";
-            }
-        })
-
-        game.setKeyMap("medium")
+        game.setKeyMap("medium");
+        game.stop("escape")
     }
 
     const hard = document.getElementById("hard-button");
     hard.onclick = () => {
-        BUTTON_NAMES.forEach(idName => {
-            let ele = document.getElementById(idName)
-            if(idName === "a-button" || idName === "s-button" || idName === "l-button" || idName === "colon-button"
-                || idName === "d-button" || idName === "k-button"
-                || idName === "j-button" || idName === "f-button" ){
-                ele.className = idName;
-            }else{
-                ele.className = "disabled-button";
-            }
-        })
-
         game.setKeyMap("hard")
+        game.stop("escape")
     }
     const extreme = document.getElementById("extreme-button");
     extreme.onclick = () => {
-        BUTTON_NAMES.forEach(idName => {
-            let ele = document.getElementById(idName)
-            ele.className = idName
-        })
-
         game.setKeyMap("extreme")
+        game.stop("escape")
     }
 
     // Audio event listeners
