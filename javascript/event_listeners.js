@@ -12,30 +12,30 @@ const eventListeners = (canvas,game,ctx) => {
     const edit = document.getElementById("edit-button");
     edit.onclick = () => {
         game.setKeyMap("edit")
-        game.stop("escape")
+        game.stop("restart")
     }
 
     const easy = document.getElementById("easy-button");
     easy.onclick = () => {
         game.setKeyMap("easy")
-        game.stop("escape")
+        game.stop("restart")
     }
     
     const medium = document.getElementById("medium-button");
     medium.onclick = () => {
         game.setKeyMap("medium");
-        game.stop("escape")
+        game.stop("restart")
     }
 
     const hard = document.getElementById("hard-button");
     hard.onclick = () => {
         game.setKeyMap("hard")
-        game.stop("escape")
+        game.stop("restart")
     }
     const extreme = document.getElementById("extreme-button");
     extreme.onclick = () => {
         game.setKeyMap("extreme")
-        game.stop("escape")
+        game.stop("restart")
     }
 
     // Audio event listeners

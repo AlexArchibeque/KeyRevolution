@@ -22,6 +22,8 @@ class Game {
         // Current key map set into arrays as to keep track of order.
         this.currentKeyMap = '';
 
+        //
+        this.reset = false;
 
         this.keys = {
             // a:[new KeyA(1,-10000)],
@@ -51,6 +53,8 @@ class Game {
             bad:0,
             missed: 0
         }
+
+        this.total = 0
 
         // Set the width/height of the game screen.
         this.canvas = canvas;
@@ -93,12 +97,14 @@ class Game {
             let easyArr = easy();
             this.keys = easyArr[0];
             this.audio = easyArr[1];
+            this.total = easyArr[2];
 
             this.currentKeyMap = "easy";
         }else if(difficulty === "medium"){
             let mediumArr = medium();
             this.keys = mediumArr[0];
             this.audio = mediumArr[1];
+            this.total = mediumArr[2];
             
 
             this.currentKeyMap = "medium"
@@ -106,6 +112,7 @@ class Game {
             let hardArr = hard();
             this.keys = hardArr[0];
             this.audio = hardArr[1];
+            this.total = hardArr[2];
 
             this.currentKeyMap = "hard"
 
@@ -263,6 +270,8 @@ class Game {
         badLI.innerHTML = this.score["bad"]
         let missedLI = document.getElementById("missed-score")
         missedLI.innerHTML = this.score["missed"]
+        let totalLi = document.getElementById("total-score")
+        totalLi.innerHTML = this.total
     }
 
     showPauseScreen(fin){
@@ -275,6 +284,9 @@ class Game {
         if(fin === "finished"){
             h1Modal.innerHTML = "Finished!";
             escInstructions.innerHTML = "Congrats!";
+        }else if (fin === "test"){
+            h1Modal.innerHTML = `${this.currentKeyMap.charAt(0).toUpperCase() + this.currentKeyMap.slice(1)} restart!`;
+            escInstructions.innerHTML = "<strong>Space</strong> - To Start!"
         }else{
             h1Modal.innerHTML = "Paused";
             escInstructions.innerHTML = "<strong>ESC</strong> - To Continue";
@@ -283,6 +295,7 @@ class Game {
         if(modal.style.display === "block"){
             modal.style.display = "none";
             this.scoreScreen = false;
+            this.reset = false;
         }else{
             modal.style.display = "block";
             this.scoreScreen = true;
@@ -309,6 +322,11 @@ class Game {
             this.showPauseScreen();
             this.handleReset();
             
+        }else if(key === "restart"){
+
+            this.gameOver ? this.gameOver = false : this.gameOver = true;
+            this.reset = true
+
         }else if(key === "escape"){
             if(this.currentKeyMap === "edit"){
                 console.clear();
@@ -385,6 +403,8 @@ class Game {
             this.checkGameOver();
         }else if(this.finished) {
             this.showPauseScreen("finished");
+        } else if(this.reset) {
+            this.showPauseScreen("test");
         } else {
             this.showPauseScreen();
         }

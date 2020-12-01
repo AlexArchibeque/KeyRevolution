@@ -44,7 +44,7 @@ function easy() {
         keyMap["f"].push(key)
     })
 
-    return [keyMap, audioTrack];
+    return [keyMap, audioTrack, (a.length + d.length + f.length + s.length)];
 }
 
 export default easy;
