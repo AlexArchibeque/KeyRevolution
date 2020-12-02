@@ -25,7 +25,7 @@ class Game {
         // handles of clicking difficulties
         this.reset = false;
         // handles clicking on song
-        this.songName = "buttercup";
+        this.songName = "Buttercup";
 
         this.keys = {
             // a:[new KeyA(1,-10000)],
@@ -180,9 +180,6 @@ class Game {
     }
 
     handleKey(button, key){
-        if(this.reset && key === "space"){
-
-        }
 
         // Handles if there are no keys left.
         this.handleKeyAnimation(button)
@@ -286,15 +283,19 @@ class Game {
         // Changes inner HTML depending on if game is paused or finished.
         let h1Modal = document.getElementById("paused-or-finished");
         let escInstructions = document.getElementById("esc-to-continue");
+        let secondaryInstructions = document.getElementById("secondary-instructions")
 
         if(fin === "finished"){
             h1Modal.innerHTML = "Finished!";
+            secondaryInstructions.innerHTML = "<strong>R</strong>- To restart"
             escInstructions.innerHTML = "Congrats!";
         }else if (fin === "test"){
-            h1Modal.innerHTML = `${this.currentKeyMap.charAt(0).toUpperCase() + this.currentKeyMap.slice(1)} restart!`;
+            h1Modal.innerHTML = `${this.songName.charAt(0).toUpperCase() + this.songName.slice(1)} restart!`;
+            secondaryInstructions.innerHTML = `Difficulty: <strong>${this.currentKeyMap.charAt(0).toUpperCase() + this.currentKeyMap.slice(1)} </strong`
             escInstructions.innerHTML = "<strong>ESC</strong> - To Start!"
         }else{
             h1Modal.innerHTML = "Paused";
+            secondaryInstructions.innerHTML = "<strong>R</strong>- To restart"
             escInstructions.innerHTML = "<strong>ESC</strong> - To Continue";
         }
 

@@ -57,22 +57,20 @@ const eventListeners = (canvas,game,ctx) => {
 
     const buttercup = document.getElementById("buttercup");
     buttercup.onclick = () => {
-        game.songName = "buttercup"
+        game.songName = "Buttercup"
         game.setKeyMap(game.currentKeyMap)
         game.stop("restart")
     }
     const hillsofradience = document.getElementById("hillsofradience");
     hillsofradience.onclick = () => {
-        game.songName = "hillsofradiance"
+        game.songName = "Hills of Radiance"
         game.setKeyMap(game.currentKeyMap)
         game.stop("restart")
     }
     const dummy = document.getElementById("dummy");
     dummy.onclick = () => {
-        debugger;
-        game.songName = "dummy"
+        game.songName = "Dummy"
         game.setKeyMap(game.currentKeyMap)
-        debugger;
         game.stop("restart")
     }
 

@@ -18,18 +18,18 @@
 <body>
 
     <div class="game-and-difficulties-container">
+        <div class="songs-container">
+            <button id="buttercup">Buttercup</button>
+            <button id="hillsofradience">Hills of Radiance</button>
+            <button id="dummy">Dummy!</button>
+        </div>
         <div class="difficulties-container">
             <button id="edit-button">Edit </button>
             <button id="easy-button">Easy</button>
             <button id="medium-button">Medium</button>
             <button id="hard-button">Hard</button>
         </div>
-
-        <div class="songs-container">
-            <button id="buttercup">Buttercup</button>
-            <button id="hillsofradience">Hills of Radience</button>
-            <button id="dummy">Dummy!</button>
-        </div>
+        
 
         <canvas id="game-canvas"></canvas>
 
@@ -124,7 +124,7 @@
                     </li>
                 </ul>
                 <div class="right-side-instructions">
-                    <p>
+                    <p id="secondary-instructions">
                         <strong>R</strong>- To restart
                     </p>
                     <p id="esc-to-continue">
