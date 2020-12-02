@@ -53,6 +53,28 @@ const eventListeners = (canvas,game,ctx) => {
         }
     }
 
+    // Difficulty event listeners
+
+    const buttercup = document.getElementById("buttercup");
+    buttercup.onclick = () => {
+        game.songName = "buttercup"
+        game.setKeyMap(game.currentKeyMap)
+        game.stop("restart")
+    }
+    const hillsofradience = document.getElementById("hillsofradience");
+    hillsofradience.onclick = () => {
+        game.songName = "hillsofradiance"
+        game.setKeyMap(game.currentKeyMap)
+        game.stop("restart")
+    }
+    const dummy = document.getElementById("dummy");
+    dummy.onclick = () => {
+        debugger;
+        game.songName = "dummy"
+        game.setKeyMap(game.currentKeyMap)
+        debugger;
+        game.stop("restart")
+    }
 
     // Listening for key presses
     document.addEventListener("keydown", (event)=>{

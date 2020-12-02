@@ -3,6 +3,7 @@ const PATH = document.URL.substr(0, document.URL.lastIndexOf('/'));
 
 function medium(song) {
     let audioTrack;
+    
     let a = [];
     let d = [];
     let f = [];

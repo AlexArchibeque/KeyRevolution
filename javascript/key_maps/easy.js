@@ -1,10 +1,9 @@
 import {KeyA, KeyS, KeyF, KeyD} from './keys'
-// import audioFile from '../../songs/buttercup.mp3'
 const PATH = document.URL.substr(0, document.URL.lastIndexOf('/'));
-
 
 function easy(song) {
     let audioTrack;
+    
     let a = [];
     let d = [];
     let f = [];
