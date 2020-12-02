@@ -32,12 +32,6 @@ const eventListeners = (canvas,game,ctx) => {
         game.setKeyMap("hard")
         game.stop("restart")
     }
-    const extreme = document.getElementById("extreme-button");
-    extreme.onclick = () => {
-        game.setKeyMap("extreme")
-        game.stop("restart")
-    }
-
     // Audio event listeners
 
     let volumeDown = document.getElementById("volume-down");

@@ -22,8 +22,10 @@ class Game {
         // Current key map set into arrays as to keep track of order.
         this.currentKeyMap = '';
 
-        //
+        // handles of clicking difficulties
         this.reset = false;
+        // handles clicking on song
+        this.songName = "buttercup";
 
         this.keys = {
             // a:[new KeyA(1,-10000)],
@@ -94,14 +96,14 @@ class Game {
         }
 
         if(difficulty === "easy"){
-            let easyArr = easy();
+            let easyArr = easy(this.songName);
             this.keys = easyArr[0];
             this.audio = easyArr[1];
             this.total = easyArr[2];
 
             this.currentKeyMap = "easy";
         }else if(difficulty === "medium"){
-            let mediumArr = medium();
+            let mediumArr = medium(this.songName);
             this.keys = mediumArr[0];
             this.audio = mediumArr[1];
             this.total = mediumArr[2];
@@ -109,7 +111,7 @@ class Game {
 
             this.currentKeyMap = "medium"
         }else if(difficulty === "hard"){
-            let hardArr = hard();
+            let hardArr = hard(this.songName);
             this.keys = hardArr[0];
             this.audio = hardArr[1];
             this.total = hardArr[2];
@@ -117,8 +119,8 @@ class Game {
             this.currentKeyMap = "hard"
 
         }else if(difficulty === "edit"){
-            let easyArr = easy();
-            this.audio = easyArr[1]
+            let Arr = easy(this.songName);
+            this.audio = Arr[1]
             this.keys = {
                 a:[new KeyA(1,-10000)],
                 s:[],
@@ -178,6 +180,10 @@ class Game {
     }
 
     handleKey(button, key){
+        if(this.reset && key === "space"){
+
+        }
+
         // Handles if there are no keys left.
         this.handleKeyAnimation(button)
         if(this.keys[key].length === 0){
@@ -286,7 +292,7 @@ class Game {
             escInstructions.innerHTML = "Congrats!";
         }else if (fin === "test"){
             h1Modal.innerHTML = `${this.currentKeyMap.charAt(0).toUpperCase() + this.currentKeyMap.slice(1)} restart!`;
-            escInstructions.innerHTML = "<strong>Space</strong> - To Start!"
+            escInstructions.innerHTML = "<strong>ESC</strong> - To Start!"
         }else{
             h1Modal.innerHTML = "Paused";
             escInstructions.innerHTML = "<strong>ESC</strong> - To Continue";
