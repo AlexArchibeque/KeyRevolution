@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="css/keys.css">
     <link rel="stylesheet" href="css/modal.css">
+    <link rel="stylesheet" href="css/score-streak.css">
     <!-- Webpack bundled JS -->
     <script type="text/javascript" src="util_files/bundle.js" > </script>
     <title>Key Revolution</title>
@@ -52,7 +53,14 @@
                     </button>
                 </div>
                 <div class="right-side-button-container">
-                    <button id="j-button" class="disabled-button">
+
+                    <div class="outer-div-for-streaks">
+                        <div id="streak-type">Perfect!</div>
+                        <div id="streak-number">Streak: 13</div>
+                        <div id="streak-score">Score: 0</div>
+                    </div>
+
+                    <!-- <button id="j-button" class="disabled-button">
                         <p class="button-inner-text">J</p>
                     </button>
                     <button id="k-button" class="disabled-button">
@@ -63,7 +71,7 @@
                     </button>
                     <button id="colon-button" class="disabled-button">
                         <p class="button-inner-text">;</p>
-                    </button>
+                    </button> -->
                 </div>
             </div>
             <button id="space-button" class="disabled-button">
@@ -165,6 +173,8 @@
             Ready?
         </div>
     </div>
+
+
 
 </body>
 </html>

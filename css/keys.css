@@ -12,8 +12,8 @@
     width: 1000px;
 }
 
-.left-side-button-container,
-.right-side-button-container {
+/* .right-side-button-container */
+.left-side-button-container {
     display:flex;
     width: 370px;
     align-items: center;

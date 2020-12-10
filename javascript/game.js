@@ -34,12 +34,12 @@ class Game {
             d:[],
             f:[],
 
-            j:[],
-            k:[],
-            l:[],
-            colon:[],
+            // j:[],
+            // k:[],
+            // l:[],
+            // colon:[],
 
-            space:[]
+            // space:[]
         };
         this.editKeyMap = {
             a:[],
@@ -99,6 +99,7 @@ class Game {
             let easyArr = easy(this.songName);
             this.keys = easyArr[0];
             this.audio = easyArr[1];
+            this.audio.volume = this.audioVolume
             this.total = easyArr[2];
 
             this.currentKeyMap = "easy";
@@ -106,6 +107,7 @@ class Game {
             let mediumArr = medium(this.songName);
             this.keys = mediumArr[0];
             this.audio = mediumArr[1];
+            this.audio.volume = this.audioVolume
             this.total = mediumArr[2];
             
 
@@ -114,6 +116,7 @@ class Game {
             let hardArr = hard(this.songName);
             this.keys = hardArr[0];
             this.audio = hardArr[1];
+            this.audio.volume = this.audioVolume
             this.total = hardArr[2];
 
             this.currentKeyMap = "hard"
@@ -121,18 +124,19 @@ class Game {
         }else if(difficulty === "edit"){
             let Arr = easy(this.songName);
             this.audio = Arr[1]
+            this.audio.volume = this.audioVolume
             this.keys = {
                 a:[new KeyA(1,-10000)],
                 s:[],
                 d:[],
                 f:[],
     
-                j:[],
-                k:[],
-                l:[],
-                colon:[],
+                // j:[],
+                // k:[],
+                // l:[],
+                // colon:[],
     
-                space:[]
+                // space:[]
             };
             this.editKeyMap = {
                 a:[],
@@ -195,7 +199,7 @@ class Game {
         let buttonY = currentButton.top - gameCanvas.top - (currentButton.height/2)
 
         // Grabs Y position of first in line key falling down the screen.
-        let firstKey = this.keys[key][0]
+        let firstKey = this.keys[key][this.keys[key].length - 1]
         // Takes Y Position of current key, adds frameCount to it to get the relative position.
         // Then adds the total height of the key and divides by 2 to get the middle of the element
         let keyY = firstKey.posY + this.frameCount + (firstKey.height/2)
@@ -208,17 +212,17 @@ class Game {
         let overlapPosY = keyY - buttonY
 
         if(overlapPosY >= 15 && overlapPosY <= 35 ){
-            this.keys[key].shift();
+            this.keys[key].pop();
             this.score["perfect"] += 1;
 
         }else if((overlapPosY >= 36 && overlapPosY <= 55) 
         || (overlapPosY <= 14 && overlapPosY >= -6)){
-            this.keys[key].shift();
+            this.keys[key].pop();
             this.score["ok"] += 1;
 
         }else if((overlapPosY >= 56 && overlapPosY <= 75) 
         || (overlapPosY <= -7 && overlapPosY >= -27 )) {
-            this.keys[key].shift();
+            this.keys[key].pop();
             this.score["bad"] += 1;
         }
     }
@@ -289,7 +293,7 @@ class Game {
             h1Modal.innerHTML = "Finished!";
             secondaryInstructions.innerHTML = "<strong>R</strong>- To restart"
             escInstructions.innerHTML = "Congrats!";
-        }else if (fin === "test"){
+        }else if (fin === "songOrDiffChange"){
             h1Modal.innerHTML = `${this.songName.charAt(0).toUpperCase() + this.songName.slice(1)} restart!`;
             secondaryInstructions.innerHTML = `Difficulty: <strong>${this.currentKeyMap.charAt(0).toUpperCase() + this.currentKeyMap.slice(1)} </strong`
             escInstructions.innerHTML = "<strong>ESC</strong> - To Start!"
@@ -411,7 +415,7 @@ class Game {
         }else if(this.finished) {
             this.showPauseScreen("finished");
         } else if(this.reset) {
-            this.showPauseScreen("test");
+            this.showPauseScreen("songOrDiffChange");
         } else {
             this.showPauseScreen();
         }

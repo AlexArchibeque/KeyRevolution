@@ -28,31 +28,31 @@ function easy(song) {
     let keyMap = {
         a:[], s:[], d:[], f:[],
 
-        j:[], k:[], l:[], colon:[],
+        // j:[], k:[], l:[], colon:[],
 
-        space:[]
+        // space:[]
     };
 
 
 
     a.forEach( posY => { 
         let key = new KeyA(1, (posY - 470)* -1)
-        keyMap["a"].push(key)
+        keyMap["a"].unshift(key)
     })
 
     s.forEach( posY => { 
         let key = new KeyS(1, (posY - 470)* -1)
-        keyMap["s"].push(key)
+        keyMap["s"].unshift(key)
     })
 
     d.forEach( posY => { 
         let key = new KeyD(1, (posY - 470)* -1)
-        keyMap["d"].push(key)
+        keyMap["d"].unshift(key)
     })
 
     f.forEach( posY => { 
         let key = new KeyF(1, (posY - 470)* -1)
-        keyMap["f"].push(key)
+        keyMap["f"].unshift(key)
     })
 
     return [keyMap, audioTrack, (a.length + d.length + f.length + s.length)];
