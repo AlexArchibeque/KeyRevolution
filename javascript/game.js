@@ -26,6 +26,16 @@ class Game {
         this.reset = false;
         // handles clicking on song
         this.songName = "Buttercup";
+        // Streak of keys hit
+        this.streak = 0;
+        // Score
+        this.numScore = {
+            perfect:0,
+            ok: 0,
+            bad: 0,
+            total: 0
+        };
+
 
         this.keys = {
             // a:[new KeyA(1,-10000)],
@@ -74,6 +84,14 @@ class Game {
 
         eventListeners(this.canvas, this, this.ctx);
         this.setKeyMap("easy");
+    }
+
+    submitScore(){
+
+    }
+
+    retrieveScores(){
+        
     }
 
     editMode(key){
@@ -210,21 +228,54 @@ class Game {
 
     handleKeyAlignmentCollision(keyY, buttonY, key){
         let overlapPosY = keyY - buttonY
+        let streakType = document.getElementById("streak-type")
+        let positivePosY = 0;
+        if(overlapPosY < 0){
+            positivePosY = overlapPosY * -1
+        }
+
 
         if(overlapPosY >= 15 && overlapPosY <= 35 ){
             this.keys[key].pop();
             this.score["perfect"] += 1;
+            this.numScore["perfect"] += Math.ceil((100 * (overlapPosY * .01)))
+            this.numScore["total"] += Math.ceil((100 * (overlapPosY * .01)))
+            streakType.innerHTML = "<p class='perfect-class'>PERFECT!!</p>"
+            this.streak += 1
 
         }else if((overlapPosY >= 36 && overlapPosY <= 55) 
         || (overlapPosY <= 14 && overlapPosY >= -6)){
             this.keys[key].pop();
             this.score["ok"] += 1;
+            if(positivePosY > 0){
+                this.numScore["ok"] += Math.ceil((50 * (positivePosY * .01)))
+                this.numScore["total"] += Math.ceil((50 * (positivePosY * .01)))
+            }else{
+                this.numScore["ok"] += Math.ceil((50 * (overlapPosY * .01)))
+                this.numScore["total"] += Math.ceil((50 * (overlapPosY * .01)))
+            }
+            streakType.innerHTML = "<p class='ok-class'>O.K.</p>"
+            this.streak += 1
 
         }else if((overlapPosY >= 56 && overlapPosY <= 75) 
         || (overlapPosY <= -7 && overlapPosY >= -27 )) {
             this.keys[key].pop();
             this.score["bad"] += 1;
+
+            if(positivePosY > 0){
+                this.numScore["bad"] += Math.ceil((25 * (positivePosY * .01)))
+                this.numScore["total"] += Math.ceil((25 * (positivePosY * .01)))
+            }else{
+                this.numScore["bad"] += Math.ceil((25 * (overlapPosY * .01)))
+                this.numScore["total"] += Math.ceil((25 * (overlapPosY * .01)))
+            }
+
+            streakType.innerHTML = "<p class='bad-class'>BAD :(</p>"
+            this.streak += 1
         }
+    
+        document.getElementById("streak-number").innerHTML = `Streak: ${this.streak}`
+        document.getElementById("streak-score").innerHTML = `Score: ${this.numScore.total}`
     }
 
     draw(count){
@@ -259,8 +310,11 @@ class Game {
                 }
             })
             
-            if(this.keys[key].length != newKeyArr){
+            if(this.keys[key].length != newKeyArr.length){
                 this.score["missed"] += (this.keys[key].length - newKeyArr.length)
+                document.getElementById("streak-type").innerHTML = "<p class='missed-class'>MISSED</p>"
+                document.getElementById("streak-number").innerHTML = `Streak: 0`
+                this.streak = 0;
             }
             this.keys[key] = newKeyArr;
         })
@@ -271,14 +325,18 @@ class Game {
     setScreenScores(){
         let perfLI = document.getElementById("perfect-score")
         perfLI.innerHTML = this.score["perfect"]
+        document.getElementById("perf-num-score").innerHTML = this.numScore.perfect
         let okLI = document.getElementById("ok-score")
         okLI.innerHTML = this.score["ok"]
+        document.getElementById("ok-num-score").innerHTML = this.numScore.ok
         let badLI = document.getElementById("bad-score")
         badLI.innerHTML = this.score["bad"]
+        document.getElementById("bad-num-score").innerHTML = this.numScore.bad
         let missedLI = document.getElementById("missed-score")
         missedLI.innerHTML = this.score["missed"]
         let totalLi = document.getElementById("total-score")
         totalLi.innerHTML = this.total
+        document.getElementById("total-num-score").innerHTML = this.numScore.total
     }
 
     showPauseScreen(fin){
@@ -364,12 +422,27 @@ class Game {
         // Resets frame count
         this.frameCount = 0;
         this.gameOver = false;
+
+        // KeyScore reset
         this.score = {
             perfect:0,
             ok:0,
             bad:0,
             missed: 0
         }
+
+        // NumberScore Reset
+        this.numScore = {
+            perfect:0,
+            ok: 0,
+            bad: 0,
+            total: 0
+        };
+
+        // Right side reset
+        document.getElementById("streak-type").innerHTML = "<p class='missed-class'></p>"
+        document.getElementById("streak-number").innerHTML = `Streak: 0`
+        document.getElementById("streak-score").innerHTML = `Score: ${this.numScore.total}`
 
         // Pauses audio, resets it to begging of the track
         this.stopAudio();

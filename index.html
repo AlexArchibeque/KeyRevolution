@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="css/keys.css">
     <link rel="stylesheet" href="css/modal.css">
     <link rel="stylesheet" href="css/score-streak.css">
+    <link rel="stylesheet" href="css/right-side.css">
     <!-- Webpack bundled JS -->
     <script type="text/javascript" src="util_files/bundle.js" > </script>
     <title>Key Revolution</title>
@@ -55,9 +56,15 @@
                 <div class="right-side-button-container">
 
                     <div class="outer-div-for-streaks">
-                        <div id="streak-type">Perfect!</div>
-                        <div id="streak-number">Streak: 13</div>
-                        <div id="streak-score">Score: 0</div>
+                        <div id="streak-type">
+
+                        </div>
+                        <div id="streak-number">
+                            
+                        </div>
+                        <div id="streak-score">
+                            
+                        </div>
                     </div>
 
                     <!-- <button id="j-button" class="disabled-button">
@@ -110,24 +117,34 @@
             <h1 id="paused-or-finished">Paused/Finished</h1>
             <div class="bottom-of-score-screen">
                 <ul>
+                    <li id="categories-score-screen-li">
+                        <p>Type</p>
+                        <p>Score</p>
+                        <p>Keys</p>
+                    </li>
                     <li id="perfect-li">
                         <p>Perfect!</p>
+                        <p id="perf-num-score" class="num-score">0</p>
                         <p id="perfect-score">0</p>
                     </li>
                     <li id="ok-li">
                         <p>Ok</p>
+                        <p id="ok-num-score" class="num-score">0</p>
                         <p id="ok-score">0</p>
                     </li>
                     <li id="bad-li">
                         <p>Bad :(</p>
+                        <p id="bad-num-score" class="num-score">0</p>
                         <p id="bad-score">0</p>
                     </li>
                     <li id="missed-li">
                         <p>Missed</p>
+                        <p></p>
                         <p id="missed-score">0</p>
                     </li>
                     <li id="total-li">
                         <p>Total</p>
+                        <p id="total-num-score" class="num-score">0</p>
                         <p id="total-score">0</p>
                     </li>
                 </ul>
@@ -138,6 +155,14 @@
                     <p id="esc-to-continue">
                         <strong>ESC</strong> - To continue
                     </p>
+
+                    <div id="submit-score-form">
+                        <label>
+                            <p>Submit Score!</p>
+                            <input type="text" placeholder="Name"/>
+                        </label>
+                        <button id="submit-score">Submit Score</button>
+                    </div>
                 </div>
             </div>
         </div>

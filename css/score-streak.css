@@ -4,3 +4,30 @@
     justify-content: center;
     width: 600px;
 } 
+
+.num-score {
+    display:flex;
+    align-items: center;
+    width: 100px;
+    justify-content:center;
+}
+
+#perfect-li > p:first-child,
+#ok-li > p:first-child,
+#bad-li > p:first-child,
+#missed-li > p:first-child,
+#total-li > p:first-child,
+#categories-score-screen-li > p:first-child{
+    width: 130px;
+}
+
+#perfect-li > p:last-child,
+#ok-li > p:last-child,
+#bad-li > p:last-child,
+#missed-li > p:last-child,
+#total-li > p:last-child,
+#categories-score-screen-li > p:last-child {
+    width: 60px;
+    display: flex;
+    justify-content: center;
+}

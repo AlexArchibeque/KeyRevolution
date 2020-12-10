@@ -46,7 +46,7 @@
 
 .bottom-of-score-screen > ul {
     display: flex;
-    width: 40%;
+    width: 45%;
     flex-direction: column;
 
 }
