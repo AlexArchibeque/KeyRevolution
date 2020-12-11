@@ -1,27 +1,59 @@
+/* Classes that get made */
+
 .perfect-class{
+    font-size: 80px;
+    font-weight: 700;
+    color: red;
+    opacity: 1;
+    animation: colorRotate 6s linear 0s infinite;
 
 }
 
 .ok-class {
-
+    font-size: 80px;
+    font-weight: 600;
+    color: green;
+    opacity: 1;
+    animation: fadein 1s linear;
 }
 
 .bad-class {
+    font-size: 80px;
+    font-weight: 500;
+    color: slategrey;    
+    opacity: 1;
+    animation: fadein 1s linear;
+}
 
+
+@keyframes fadein {
+0%{ opacity: 0 }
+100% { opacity: 1 }
 }
 
 .missed-class {
-
+    font-size: 40px;
+    font-weight: 700;
+    color: blue;
 }
 
-.streak-type{
-
+.weak-streak,
+.weak-score{
+    font-size: 30px;
+    font-weight: 500;
+    color: slategrey;
 }
 
-.streak-number{
-
+.med-streak,
+.med-score{
+    font-size: 30px;
+    font-weight: 600;
+    color: green;
 }
 
-.streak-score{
-
+.strong-streak,
+.strong-score {
+    font-size: 30px;
+    font-weight: 700;
+    animation: colorRotate 6s linear 0s infinite;
 }

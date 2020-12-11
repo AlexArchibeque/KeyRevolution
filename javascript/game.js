@@ -135,12 +135,25 @@ class Game {
         }
 
         this.frameCount = 0
+        this.numScore = {
+            perfect:0,
+            ok: 0,
+            bad: 0,
+            total: 0
+        };
+
+        this.streak = 0;
+
         this.score = {
             perfect:0,
             ok:0,
             bad:0,
             missed: 0
         }
+
+        document.getElementById("streak-number").innerHTML = `<p class="weak-streak">Streak: ${this.streak} </p>`
+        document.getElementById("streak-score").innerHTML = `<p class="weak-score">Score: ${this.numScore.total} </p>`
+        document.getElementById("streak-type").innerHTML = `<p class="missed-class">Reset</p>`
 
         if(difficulty === "easy"){
             let easyArr = easy(this.songName);
@@ -302,9 +315,23 @@ class Game {
             streakType.innerHTML = "<p class='bad-class'>BAD :(</p>"
             this.streak += 1
         }
-    
-        document.getElementById("streak-number").innerHTML = `Streak: ${this.streak}`
-        document.getElementById("streak-score").innerHTML = `Score: ${this.numScore.total}`
+
+        if(this.streak < 30){
+            document.getElementById("streak-number").innerHTML = `<p class="weak-streak">Streak: ${this.streak} </p>`
+        } else if ( this.streak > 30 && this.streak < 60){
+            document.getElementById("streak-number").innerHTML = `<p class="med-streak">Streak: ${this.streak} </p>`
+        } else if ( this.streak > 60) {
+            document.getElementById("streak-number").innerHTML = `<p class="strong-streak">Streak: ${this.streak} </p>`
+        }
+
+
+        if(this.numScore.total < 1000) {
+            document.getElementById("streak-score").innerHTML = `<p class="weak-score">Score: ${this.numScore.total} </p>`
+        } else if( this.numScore.total > 1000 && this.numScore.total < 2000){
+            document.getElementById("streak-score").innerHTML = `<p class="med-score">Score: ${this.numScore.total} </p>`
+        } else if (this.numScore.total > 2000){
+            document.getElementById("streak-score").innerHTML = `<p class="strong-score">Score: ${this.numScore.total} </p>`
+        }
     }
 
     draw(count){
