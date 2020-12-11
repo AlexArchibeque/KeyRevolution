@@ -53,6 +53,13 @@ const eventListeners = (canvas,game,ctx) => {
         }
     }
 
+    // Score event Listeners
+    let submitScoreButton = document.getElementById("submit-score");
+    submitScoreButton.onclick = () => {
+        submitScoreButton.disabled = true
+        game.submitScore(document.getElementById('name').value)
+    }
+
     // Difficulty event listeners
 
     const buttercup = document.getElementById("buttercup");

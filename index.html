@@ -13,11 +13,13 @@
     <link rel="stylesheet" href="css/modal.css">
     <link rel="stylesheet" href="css/score-streak.css">
     <link rel="stylesheet" href="css/right-side.css">
+    <link rel="stylesheet" href="css/score-screen.css">
     <!-- Webpack bundled JS -->
     <script type="text/javascript" src="util_files/bundle.js" > </script>
     <title>Key Revolution</title>
 </head>
 <body>
+
 
     <div class="game-and-difficulties-container">
         <div class="songs-container">
@@ -32,10 +34,7 @@
             <button id="hard-button">Hard</button>
         </div>
         
-
         <canvas id="game-canvas"></canvas>
-
-
 
         <div class="button-container">
             <div class="not-space-button-container">
@@ -65,7 +64,17 @@
                         <div id="streak-score">
                             
                         </div>
+                        <div class="num-score-div">
+                            <span>
+                                <p>Name</p>
+                                <p>Score</p>
+                            </span>
+                            <ul id="num-score-ul">
+                        
+                            </ul>
+                        </div>
                     </div>
+
 
                     <!-- <button id="j-button" class="disabled-button">
                         <p class="button-inner-text">J</p>
@@ -159,7 +168,7 @@
                     <div id="submit-score-form">
                         <label>
                             <p>Submit Score!</p>
-                            <input type="text" placeholder="Name"/>
+                            <input type="text" placeholder="Name" id="name" maxlength="5"/>
                         </label>
                         <button id="submit-score">Submit Score</button>
                     </div>
@@ -198,7 +207,6 @@
             Ready?
         </div>
     </div>
-
 
 
 </body>

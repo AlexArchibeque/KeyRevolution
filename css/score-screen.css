@@ -1,0 +1,19 @@
+.num-score-div{
+    display: flex;
+    flex-direction: column;
+}
+
+.num-score-div > span {
+    display: flex;
+}
+
+#num-score-ul{
+    display:flex;
+    flex-direction: column;
+}
+
+.num-score-div > span > p,
+#num-score-ul > li {
+    margin-left: 5px;
+    margin-right: 5px;
+}

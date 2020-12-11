@@ -36,6 +36,9 @@ class Game {
             total: 0
         };
 
+        // Local Storage Scores
+        this.storedScores;
+
 
         this.keys = {
             // a:[new KeyA(1,-10000)],
@@ -86,12 +89,38 @@ class Game {
         this.setKeyMap("easy");
     }
 
-    submitScore(){
-
+    submitScore(name){
+        // this.currentKeyMap == difficulty
+        // this.songName == song's name
+        let storageName = `${this.currentKeyMap}-${this.songName}`
+        let currentScores = JSON.parse(window.localStorage.getItem(storageName))
+        
+        let newScore = [name, this.numScore.total]
+        if(currentScores === null){
+            window.localStorage.setItem(storageName, JSON.stringify([newScore]))
+        }else{
+            currentScores.push(newScore)
+            window.localStorage.setItem(storageName, JSON.stringify(currentScores))
+        }
+        this.retrieveScores()
     }
 
     retrieveScores(){
-        
+        let storageName = `${this.currentKeyMap}-${this.songName}`
+        this.storedScores = JSON.parse(window.localStorage.getItem(storageName))
+        this.renderScores()
+    }
+
+    renderScores(){
+        let htmlString = ''
+
+        if(this.storedScores){
+            this.storedScores.forEach(entry =>{
+                htmlString += `<li>${entry[0]} ${entry[1]}</li>`
+            })
+
+            document.getElementById("num-score-ul").innerHTML = htmlString
+        }
     }
 
     editMode(key){
@@ -341,7 +370,9 @@ class Game {
 
     showPauseScreen(fin){
         this.setScreenScores();
+        this.retrieveScores();
         let modal = document.getElementById("score-screen-outer-modal");
+
         // Changes inner HTML depending on if game is paused or finished.
         let h1Modal = document.getElementById("paused-or-finished");
         let escInstructions = document.getElementById("esc-to-continue");
@@ -360,7 +391,7 @@ class Game {
             secondaryInstructions.innerHTML = "<strong>R</strong>- To restart"
             escInstructions.innerHTML = "<strong>ESC</strong> - To Continue";
         }
-
+        document.getElementById("submit-score").disabled = false
         if(modal.style.display === "block"){
             modal.style.display = "none";
             this.scoreScreen = false;
@@ -369,7 +400,6 @@ class Game {
             modal.style.display = "block";
             this.scoreScreen = true;
             this.audio.pause();
-            
         }
     }
 
