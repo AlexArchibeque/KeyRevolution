@@ -409,6 +409,7 @@ class Game {
             h1Modal.innerHTML = "Finished!";
             secondaryInstructions.innerHTML = "<strong>R</strong>- To restart"
             escInstructions.innerHTML = "Congrats!";
+            document.getElementById("submit-score-form").classList= "show"
         }else if (fin === "songOrDiffChange"){
             h1Modal.innerHTML = `${this.songName.charAt(0).toUpperCase() + this.songName.slice(1)} restart!`;
             secondaryInstructions.innerHTML = `Difficulty: <strong>${this.currentKeyMap.charAt(0).toUpperCase() + this.currentKeyMap.slice(1)} </strong`
@@ -418,8 +419,11 @@ class Game {
             secondaryInstructions.innerHTML = "<strong>R</strong>- To restart"
             escInstructions.innerHTML = "<strong>ESC</strong> - To Continue";
         }
+
         document.getElementById("submit-score").disabled = false
+
         if(modal.style.display === "block"){
+            document.getElementById("submit-score-form").classList = "hidden"
             modal.style.display = "none";
             this.scoreScreen = false;
             this.reset = false;

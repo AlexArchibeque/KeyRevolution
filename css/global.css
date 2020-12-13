@@ -2,6 +2,13 @@ body {
     background-color: slateGrey;
     font-family: 'ABeeZee'
 }
+.hidden{
+    display: none;
+}
+
+.show {
+    display:block;
+}
 
 #game-canvas {
     background-color: #f5f5dc;
