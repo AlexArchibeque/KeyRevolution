@@ -581,7 +581,22 @@ class Game {
     // Game loop
     start(){
         this.ctx.clearRect(0,0,this.canvas.width, this.canvas.height);
-        this.draw(this.frameCount++);
+
+        if(this.currentKeyMap === "easy"){
+            this.draw(this.frameCount++);
+        }else if(this.currentKeyMap === "medium"){
+            this.draw(this.frameCount += 1.5)
+        }else if(this.currentKeyMap === "hard"){
+            this.draw(this.frameCount += 2)
+        }
+        // Uncomment this and button to make key maps
+        // easy = 1.0
+        // medium = 1.5
+        // hard = 2.0
+        else if(this.currentKeyMap === "edit"){
+            this.frameCount += 1.5
+        }
+
         this.keyCleanUp(this.frameCount);
         
         if(!this.gameOver){
