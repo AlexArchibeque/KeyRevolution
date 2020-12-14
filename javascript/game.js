@@ -80,6 +80,9 @@ class Game {
         this.gameOver = false;
         this.finished = false;
 
+        // Allows the use of r on finish screen
+        this.finishScreen;
+
         // Score Screen
         this.scoreScreen = false;
 
@@ -220,6 +223,8 @@ class Game {
         }
         let volumePercentage = document.getElementById("volume-percentage");
         volumePercentage.innerHTML = `Volume: ${Math.floor(this.audioVolume * 100)} `
+
+        document.getElementById("volume-percentage-1").innerHTML = `Volume: ${Math.floor(this.audioVolume * 100)} `
 
         this.audio.volume = this.audioVolume;
     }
@@ -406,9 +411,12 @@ class Game {
         let secondaryInstructions = document.getElementById("secondary-instructions")
 
         if(fin === "finished"){
+            this.finishScreen = true;
+
             h1Modal.innerHTML = "Finished!";
-            secondaryInstructions.innerHTML = "<strong>R</strong>- To restart"
+            secondaryInstructions.innerHTML = "<strong>ESC</strong>- To restart"
             escInstructions.innerHTML = "Congrats!";
+
             document.getElementById("submit-score-form").classList= "show"
         }else if (fin === "songOrDiffChange"){
             h1Modal.innerHTML = `${this.songName.charAt(0).toUpperCase() + this.songName.slice(1)} restart!`;
@@ -427,6 +435,7 @@ class Game {
             modal.style.display = "none";
             this.scoreScreen = false;
             this.reset = false;
+            this.finishScreen = false;
         }else{
             modal.style.display = "block";
             this.scoreScreen = true;
@@ -449,8 +458,10 @@ class Game {
     stop(key) {
         //Reset Function
         if(key === "r" && this.gameOver === true){
-            this.showPauseScreen();
-            this.handleReset();
+            if(!this.finishScreen){
+                this.showPauseScreen();
+                this.handleReset();
+            }
             
         }else if(key === "restart"){
 
@@ -458,6 +469,12 @@ class Game {
             this.reset = true
 
         }else if(key === "escape"){
+
+            if(this.finishScreen){
+                this.showPauseScreen("songOrDiffChange");
+                this.handleReset();
+            }
+
             if(this.currentKeyMap === "edit"){
                 console.clear();
                 console.log(this.editKeyMap)

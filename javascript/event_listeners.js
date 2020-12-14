@@ -34,6 +34,16 @@ const eventListeners = (canvas,game,ctx) => {
     }
     // Audio event listeners
 
+    let volumeDown1 = document.getElementById("volume-down-1");
+    volumeDown1.onclick = () => {
+        game.handleAudio("down")
+    }
+
+    let volumeUp1 = document.getElementById("volume-up-1");
+    volumeUp1.onclick = () => {
+        game.handleAudio("up")
+    }
+
     let volumeDown = document.getElementById("volume-down");
     volumeDown.onclick = () => {
         game.handleAudio("down")
