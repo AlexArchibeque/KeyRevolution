@@ -118,12 +118,34 @@ class Game {
         let htmlString = ''
 
         if(this.storedScores){
-            this.storedScores.forEach(entry =>{
-                htmlString += `<li>${entry[0]} ${entry[1]}</li>`
+            this.sortArray(this.storedScores).forEach(entry =>{
+                htmlString += `<li> <p>${entry[0]}</p> <p>${entry[1]}</p></li>`
             })
 
             document.getElementById("num-score-ul").innerHTML = htmlString
+        } else{
+            document.getElementById("num-score-ul").innerHTML = '<p>None!</p>'
         }
+    }
+
+    sortArray(arr){
+        if(arr.length === 1){
+            return arr
+        }
+
+        let sorted = false
+        while(!sorted){
+            sorted = true
+            for(let i = 0; i < arr.length - 1; i++){
+                
+                if(arr[i+1][1] > arr[i][1]){
+                    [arr[i], arr[i+1]] = [arr[i+1], arr[i]]
+                    sorted = false
+                }
+            }
+        }
+
+        return arr
     }
 
     editMode(key){
