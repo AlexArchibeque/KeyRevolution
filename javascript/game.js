@@ -474,7 +474,7 @@ class Game {
             if(this.finishScreen){
                 this.showPauseScreen("songOrDiffChange");
                 this.handleReset();
-            }
+            }else{
 
             if(this.currentKeyMap === "edit"){
                 console.clear();
@@ -490,6 +490,7 @@ class Game {
 
                 this.audio.play();
                 this.start();
+            }
             }
         }
     }
