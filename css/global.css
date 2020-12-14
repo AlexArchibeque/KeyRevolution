@@ -27,6 +27,7 @@ body {
 .difficulties-container {
     position: relative;
     margin: 20px;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -35,8 +36,6 @@ body {
 .difficulties-container > button {
     margin-left: 10px;
     margin-right: 10px;
-    width: 70px;
-    height: 40px;
 }
 
 

@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="css/score-streak.css">
     <link rel="stylesheet" href="css/right-side.css">
     <link rel="stylesheet" href="css/score-screen.css">
+    <link rel="stylesheet" href="css/buttons.css">
     <!-- Webpack bundled JS -->
     <script type="text/javascript" src="util_files/bundle.js" > </script>
     <title>Key Revolution</title>
@@ -24,19 +25,21 @@
 
 
     <div class="game-and-difficulties-container">
-        <div class="Labeler-continer">
-
+        <div class="labeler-container">
+            <p>Songs</p>
+            <p>Difficulties</p>
         </div>
         <div class="difficulties-container">
 
-            <button id="buttercup">Buttercup</button>
-            <button id="hillsofradience">Hills of Radiance</button>
-            <button id="dummy">Dummy!</button>
+            <button id="buttercup" class="easy-song-button">Buttercup</button>
+            <button id="hillsofradience" class="medium-song-button">Hills of Radiance</button>
+            <button id="dummy" class="hard-song-button">Dummy!</button>
 
-            <button id="edit-button">Edit </button>
-            <button id="easy-button">Easy</button>
-            <button id="medium-button">Medium</button>
-            <button id="hard-button">Hard</button>
+            <button id="edit-button" class="disabled-button">Edit </button>
+
+            <button id="easy-button" class="easy-song-button">Easy</button>
+            <button id="medium-button" class="medium-song-button" >Medium</button>
+            <button id="hard-button" class="hard-song-button">Hard</button>
         </div>
         
         <canvas id="game-canvas"></canvas>

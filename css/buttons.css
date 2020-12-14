@@ -1,0 +1,62 @@
+.labeler-container{
+    display: flex;
+    width: 1000px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.labeler-container >p {
+    font-size: 30px;
+    width: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* .labeler-container > p:last-child {
+    margin-left: 200px;
+} */
+
+.easy-song-button,
+.medium-song-button,
+.hard-song-button{
+    outline:none;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    width: 120px;
+    height: 50px;
+    font-size: 20px;
+    color: black;
+    cursor: pointer;
+}
+
+
+.easy-song-button{
+    background-color: darkseagreen;
+}
+
+.easy-song-button:hover {
+    background-color: green;
+    color: white;
+}
+
+
+.medium-song-button{
+    background-color: khaki;
+}
+
+.medium-song-button:hover{
+    background-color: yellow;
+    color: black;
+}
+
+
+.hard-song-button{
+    background-color: maroon;
+    color: white;
+}
+
+.hard-song-button:hover{
+    background-color: red;
+    color: white;
+}
