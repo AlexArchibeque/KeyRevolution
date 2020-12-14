@@ -22,12 +22,15 @@
 
 
     <div class="game-and-difficulties-container">
-        <div class="songs-container">
+        <div class="Labeler-continer">
+
+        </div>
+        <div class="difficulties-container">
+
             <button id="buttercup">Buttercup</button>
             <button id="hillsofradience">Hills of Radiance</button>
             <button id="dummy">Dummy!</button>
-        </div>
-        <div class="difficulties-container">
+
             <button id="edit-button">Edit </button>
             <button id="easy-button">Easy</button>
             <button id="medium-button">Medium</button>
@@ -86,8 +89,7 @@
 
             <div class="instructions">
                 <p>
-                    Try to Line up your key-presses to the middle of the falling ones!
-                    Only one level at the moment will update soon!
+                    Line up your key presses to the beat!
                 </p>
                 <p>
                     Press <strong>ESC</strong> to change sound volume and pause.
@@ -147,20 +149,20 @@
                     </p>
 
 
-                    <div>
-                        <strong id="volume-percentage">Volume: 100</strong>
+                    <div class="volume-change-pause-screen">
+                        <p id="volume-percentage" class="volume-percentage pause-screen-vol">Volume: 100</p>
                         <div class="volume-div">
-                            <button id="volume-up">Volume Up</button>
-                            <button id="volume-down">Volume Down</button>
+                            <button id="volume-up" class="button-volume">Volume Up</button>
+                            <button id="volume-down" class="button-volume">Volume Down</button>
                         </div>
                     </div>
 
                     <div id="submit-score-form" class="hidden">
-                        <label>
-                            <p>Submit Score!</p>
+                        <p>Submit Score! (5 char max)</p>
+                        <div>
                             <input type="text" placeholder="Name" id="name" maxlength="5"/>
-                        </label>
-                        <button id="submit-score">Submit Score</button>
+                            <button id="submit-score">Submit Score</button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -172,24 +174,33 @@
         <div class="start-screen-content">
 
             <h1>Welcome to KeyRevolution!</h1>
+
             <p>
                 This is a rhythm game where you press keys corresponding
                 to the falling keys in the game area. Once you press <strong>START</strong>
                 the game will begin.
             </p>
 
-            <p class="bottom-inner-of-start-screen">
-                Be sure to adjust volume before you begin!
-                <strong>This game does use sound!</strong>
-                <strong id="volume-percentage-1">Volume: 100</strong>
-                <div class="volume-div">
-                    <button id="volume-up-1">Volume Up</button>
-                    <button id="play-button">Play/Pause</button>
-                    <button id="volume-down-1">Volume Down</button>
-                </div>
-            </p>
 
-            <button id="start-button">START</button>
+            <div class="bottom-inner-of-start-screen">
+                <img src="imgs/InstructionGif.gif"/>
+
+                <div>
+                    <p>
+                        Be sure to adjust volume before you begin!
+                        <strong>This game does use sound!</strong>
+                    </p>
+
+                    <p id="volume-percentage-1" class="volume-percentage">Volume: 100</p>
+                    <div class="volume-div">
+                        <button id="volume-up-1" class="button-volume">Volume Up</button>
+                        <button id="play-button" class="button-volume">Play/Pause</button>
+                        <button id="volume-down-1" class="button-volume">Volume Down</button>
+                    </div> 
+                </div> 
+            </div>
+
+            <button id="start-button" class="button-volume start-button">START</button>
         </div>
     </div>
     <div class="outer-countdown-box">

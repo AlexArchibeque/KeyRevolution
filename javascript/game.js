@@ -428,6 +428,7 @@ class Game {
             escInstructions.innerHTML = "<strong>ESC</strong> - To Continue";
         }
 
+        document.getElementById("submit-score").classList = ""
         document.getElementById("submit-score").disabled = false
 
         if(modal.style.display === "block"){

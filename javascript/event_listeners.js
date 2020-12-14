@@ -67,6 +67,7 @@ const eventListeners = (canvas,game,ctx) => {
     let submitScoreButton = document.getElementById("submit-score");
     submitScoreButton.onclick = () => {
         submitScoreButton.disabled = true
+        submitScoreButton.classList = "disabled-for-now"
         game.submitScore(document.getElementById('name').value)
     }
 
