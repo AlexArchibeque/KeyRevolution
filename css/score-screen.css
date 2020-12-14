@@ -40,10 +40,13 @@
 .num-score-div{
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
-.num-score-div > span {
-    display: flex;
+.num-score-div > h1 {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 5px;
 }
 
 #num-score-ul{
@@ -51,7 +54,11 @@
     flex-direction: column;
 }
 
-.num-score-div > span > p,
+#num-score-ul > li:first-child{
+    font-size: 16px;
+    font-weight: 600;
+}
+
 #num-score-ul > li {
     margin-left: 5px;
     margin-right: 5px;
