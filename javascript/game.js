@@ -594,7 +594,7 @@ class Game {
         // medium = 1.5
         // hard = 2.0
         else if(this.currentKeyMap === "edit"){
-            this.frameCount += 1.5
+            this.frameCount += 2
         }
 
         this.keyCleanUp(this.frameCount);
