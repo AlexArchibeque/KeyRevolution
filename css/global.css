@@ -3,11 +3,11 @@ body {
     font-family: 'ABeeZee'
 }
 .hidden{
-    display: none;
+    display: none !important;
 }
 
 .show {
-    display:block;
+    display: flex;
 }
 
 #game-canvas {
@@ -146,14 +146,26 @@ body {
 #submit-score-form{
     margin-top: 10px;
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 #submit-score-form > p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin-top: 15px;
     margin-bottom: 5px;
     font-size: 18px;
     width: 100%;
     
+}
+
+#submit-score-form > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 #submit-score-form > div > input,
@@ -163,21 +175,27 @@ body {
 
 #submit-score-form > div > input{
     height: 30px;
-    width: 80px;
+    width: 120px;
     font-size: 20px;
 
 }
 
 #submit-score-form > div > button {
-    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 35px;
     border: none;
-    color: white;
+    color: black;
+    font-size: 20px;
+    padding: 10px;
     background-color: green;
     cursor: pointer;
+    margin-left: 5px;
 
 }
 #submit-score-form > div > button:hover {
-    color: blue;
+    /* color: blue; */
     background-color: lightgreen;
 }
 
