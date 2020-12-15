@@ -453,14 +453,14 @@ class Game {
         document.getElementById("submit-score").classList = ""
         document.getElementById("submit-score").disabled = false
 
-        if(modal.style.display === "block"){
+        if(modal.style.display === "flex"){
             document.getElementById("submit-score-form").classList = "hidden"
             modal.style.display = "none";
             this.scoreScreen = false;
             this.reset = false;
             this.finishScreen = false;
         }else{
-            modal.style.display = "block";
+            modal.style.display = "flex";
             this.scoreScreen = true;
             this.audio.pause();
         }

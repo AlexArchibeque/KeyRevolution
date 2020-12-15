@@ -2,6 +2,8 @@
 .modal {
     display: none; 
     position: fixed; 
+    align-items:center;
+    justify-content: center;
     z-index: 1;
     left: 0;
     top: 0;
@@ -15,7 +17,8 @@
 
 .score-screen-content {
     background-color: #f5f5dc;
-    margin: 20% auto; 
+    /* margin-top: 10%;
+    margin-left: 30%;  */
     padding: 10px;
     border: 1px solid black;
     width: 800px; 
@@ -118,7 +121,9 @@
 /* Start Screen Modal */
 
 .modal-start {
-    display: block; 
+    display: flex; 
+    align-items:center;
+    justify-content:center;
     position: fixed; 
     z-index: 1;
     left: 0;
@@ -133,7 +138,9 @@
 .start-screen-content{
     background-color: #f5f5dc;
     border: 1px solid black;
-    margin: 20% auto; 
+    /* margin: 20% auto;  */
+    /* margin-top: 10%;
+    margin-left: 30%; */
     padding: 10px;
     border: 1px solid #888;
     width: 800px;
