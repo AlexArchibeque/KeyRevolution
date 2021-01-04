@@ -7,3 +7,7 @@ It is a game where i practice my vanilla Javascript HTML and CSS with the idea b
 
 For KeyRevolution, as stated above, I used vanilla Javascript, HTML5, and CSS as well as a couple ease of life technologies.
 Those being: 
+
+**Webpack**
+**Babel**
+**File-Loader**
