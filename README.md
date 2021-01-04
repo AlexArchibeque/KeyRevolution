@@ -1,10 +1,9 @@
-Score,
-only left side A S D F
+# [KeyRevolution](https://alexarchibeque.github.io/KeyRevolution/)
 
-Edit for keymap
-3 songs, 3 difficulties each
+Key Revolution is a game based off the popular rhythm game Dance Dance Revolution. 
+It is a game where i practice my vanilla Javascript HTML and CSS with the idea being I use as little Libraries, api's or outside programs as possible.
 
-flairs on right side,
-STREAK
-big Perfect/Bad/Ok/Score
+### Technologies Used
 
+For KeyRevolution, as stated above, I used vanilla Javascript, HTML5, and CSS as well as a couple ease of life technologies.
+Those being: 
