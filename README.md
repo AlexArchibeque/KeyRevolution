@@ -123,4 +123,53 @@ This function gets called everytime a Key (A, S, D, F) is pressed.
 
 ![alt-text](https://github.com/AlexArchibeque/KeyRevolution/blob/main/imgs/ButterCupRestart.png "Playing the Game")
 
-ButterCupRestart
+Clicking on any of the difficulty or songs color coded buttons at the top will reset your game and set the song to whichever song you want and the difficulty for whatever song you're on. With the use of modals it gives a quick refresh/pause before asking if you want to continue playing.
+
+It does this by running the setKeyMap function [Here](https://github.com/AlexArchibeque/KeyRevolution/blob/aa2523fd3c3025df08e50f6dcf9a41fdf592194d/javascript/game.js#L157)
+
+```js
+    this.frameCount = 0
+    this.numScore = {
+        perfect:0,
+        ok: 0,
+        bad: 0,
+        total: 0
+    };
+
+    this.streak = 0;
+
+    this.score = {
+        perfect:0,
+        ok:0,
+        bad:0,
+        missed: 0
+    }
+
+```
+
+Resetting of the games frameCount allowing for a complete restart, as well as the scores that show and total number of keys pressed for each type.
+
+
+```js
+    if(difficulty === "easy"){
+        let easyArr = easy(this.songName);
+        this.keys = easyArr[0];
+        this.audio = easyArr[1];
+        this.audio.volume = this.audioVolume
+        this.total = easyArr[2];
+
+        this.currentKeyMap = "easy";
+    }else if(difficulty === "medium"){
+        let mediumArr = medium(this.songName);
+        this.keys = mediumArr[0];
+        this.audio = mediumArr[1];
+        this.audio.volume = this.audioVolume
+        this.total = mediumArr[2];
+        
+
+        this.currentKeyMap = "medium"
+```
+
+Simple if/else statements to get the information needed and setting it in the program to use later.
+
+
