@@ -90,7 +90,36 @@ Everything gets returned in the end.
 
 ![alt-text](https://github.com/AlexArchibeque/KeyRevolution/blob/main/imgs/PlayingGif.gif "Playing the Game")
 
-PlayingGif
+The meat and bones of the game, as some would say, works fairly simply. The calculations used previously for setting each key at a specific Y position is now taken and used in the HTML canvas element.
+
+``` js
+    handleKey(button, key){
+
+        // Handles if there are no keys left.
+        this.handleKeyAnimation(button)
+        if(this.keys[key].length === 0){
+            return;
+        }
+
+        let gameCanvas = document.getElementById("game-canvas").getBoundingClientRect();
+        let currentButton = document.getElementById(button).getBoundingClientRect();
+
+        // Grabs Y position of button 
+        // subtracts half the height of the current button in order to get the middle.
+        let buttonY = currentButton.top - gameCanvas.top - (currentButton.height/2)
+
+        // Grabs Y position of first in line key falling down the screen.
+        let firstKey = this.keys[key][this.keys[key].length - 1]
+        // Takes Y Position of current key, adds frameCount to it to get the relative position.
+        // Then adds the total height of the key and divides by 2 to get the middle of the element
+        let keyY = firstKey.posY + this.frameCount + (firstKey.height/2)
+        
+        // Calculates if button is close enough to removed/counted etc
+        this.handleKeyAlignmentCollision(keyY, buttonY, key);
+    }
+```
+
+This function gets called everytime a Key (A, S, D, F) is pressed.
 
 ![alt-text](https://github.com/AlexArchibeque/KeyRevolution/blob/main/imgs/ButterCupRestart.png "Playing the Game")
 
