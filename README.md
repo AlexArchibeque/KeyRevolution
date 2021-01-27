@@ -20,9 +20,9 @@ Those being:
 
 ![alt-text](https://github.com/AlexArchibeque/KeyRevolution/blob/main/imgs/KeyRevFront.png "Playing the Game")
 
-Loading the game a few things happen, including the loading of event listeners and the setting of the song plus its associated keymap. I just want to highlight the * * *easy.js* file and how that works.
+Loading the game a few things happen, including the loading of event listeners and the setting of the song plus its associated keymap. I just want to highlight the easy.js file and how that works.
 
-``` js
+```js
     let audioTrack;
 
     let a = [];
@@ -38,10 +38,10 @@ Loading the game a few things happen, including the loading of event listeners a
         s = [265, 439, 624, 918, 1101, 1340, 1402, 1700, 1940, 2121, 2539, 2871, 3021, 3348, 3500, 3858, 4159, 4280, 4518]
 ```
 
-    This sets up the arrays that will be used later and sent back to the main game to allow keys to flow down the screen.
+This sets up the arrays that will be used later and sent back to the main game to allow keys to flow down the screen.
 
 
-``` js
+```js
         let keyMap = {
         a:[], s:[], d:[], f:[],
     };
@@ -67,9 +67,15 @@ Loading the game a few things happen, including the loading of event listeners a
         let key = new KeyF(1, (posY - 470)* -1)
         keyMap["f"].unshift(key)
     })
-
 ```
 
+Each key is then made into a custom Key class that calculates the position of where to put the key on the screen.
+
+```js
+    return [keyMap, audioTrack, (a.length + d.length + f.length + s.length)];
+```
+
+Everything gets returned in the end.
 
 
 ![alt-text](https://github.com/AlexArchibeque/KeyRevolution/blob/main/imgs/PlayingGif.gif "Playing the Game")
