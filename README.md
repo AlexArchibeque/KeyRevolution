@@ -32,7 +32,7 @@ Loading the game a few things happen, including the loading of event listeners a
     
     if(song === "Buttercup"){
         audioTrack = new Audio(`${PATH}/songs/buttercup.mp3`);
-        
+
         a = [210, 529, 917, 1162, 1401, 1999, 2061, 
             2661, 2838, 3320, 3797, 4216, 4399]
 
@@ -47,6 +47,8 @@ Loading the game a few things happen, including the loading of event listeners a
 ```
 
 This sets up the arrays that will be used later and sent back to the main game to allow keys to flow down the screen.
+
+A cool fact about these numbers are that they were made with the help of event listeners and pulling the information with dev tools console log save function.
 
 
 ```js
