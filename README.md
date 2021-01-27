@@ -17,8 +17,16 @@ Those being:
 
 ![alt-text](https://github.com/AlexArchibeque/KeyRevolution/blob/main/imgs/PlayingGif.gif "Playing the Game")
 
+PlayingGif
+
 ![alt-text](https://github.com/AlexArchibeque/KeyRevolution/blob/main/imgs/KeyRevolution.png "Playing the Game")
 
-![alt-text](https://github.com/AlexArchibeque/KeyRevolution/blob/main/imgs/KEyRevFront.png "Playing the Game")
+KeyRevolution
+
+![alt-text](https://github.com/AlexArchibeque/KeyRevolution/blob/main/imgs/KeyRevFront.png "Playing the Game")
+
+KeyRevFront
 
 ![alt-text](https://github.com/AlexArchibeque/KeyRevolution/blob/main/imgs/ButterCupRestart.png "Playing the Game")
+
+ButterCupRestart
