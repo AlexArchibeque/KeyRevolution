@@ -14,3 +14,11 @@ Those being:
 **Babel**
 
 **File-Loader**
+
+![alt-text](https://github.com/AlexArchibeque/KeyRevolution/blob/main/imgs/PlayingGif.gif "Playing the Game")
+
+![alt-text](https://github.com/AlexArchibeque/KeyRevolution/blob/main/imgs/KeyRevolution.png "Playing the Game")
+
+![alt-text](https://github.com/AlexArchibeque/KeyRevolution/blob/main/imgs/KEyRevFront.png "Playing the Game")
+
+![alt-text](https://github.com/AlexArchibeque/KeyRevolution/blob/main/imgs/ButterCupRestart.png "Playing the Game")
